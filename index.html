@@ -1,0 +1,1711 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>RideFix v11 | Mobile Motorcycle, Bike, E-Bike &amp; Golf Cart Repair Dubai</title>
+  <meta name="description" content="RideFix Dubai — We Fix. You Ride. Doorstep motorcycle oil change, repair, bicycle & e-bike servicing, and golf cart maintenance across all Dubai communities. Pay after service." />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      background-color: #0B0D10;
+      color: #F8FAFC;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.5;
+      -webkit-tap-highlight-color: transparent;
+    }
+    a { color: inherit; text-decoration: none; }
+    button, input, select { font-family: inherit; }
+    img, video { max-width: 100%; height: auto; display: block; }
+
+    /* Layout & Spacing */
+    .rf-container { width: 100%; max-width: 1280px; margin: 0 auto; padding-left: 14px; padding-right: 14px; }
+    @media (min-width: 640px) { .rf-container { padding-left: 24px; padding-right: 24px; } }
+    @media (min-width: 1024px) { .rf-container { padding-left: 32px; padding-right: 32px; } }
+
+    .rf-section { padding-top: 56px; padding-bottom: 56px; border-bottom: 1px solid #283140; }
+    @media (min-width: 640px) { .rf-section { padding-top: 80px; padding-bottom: 80px; } }
+
+    .rf-bg-dark { background-color: #0B0D10; }
+    .rf-bg-darker { background-color: #080A0D; }
+    .rf-bg-top { background-color: #060709; }
+    .rf-card { background-color: #14181F; border: 1px solid #283140; border-radius: 22px; }
+    .rf-card-inner { background-color: #1A2029; border: 1px solid #283140; border-radius: 14px; }
+
+    .rf-carbon-dots {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+      background-size: 18px 18px;
+    }
+    .rf-hero-ambient {
+      background:
+        radial-gradient(circle at 85% 18%, rgba(225, 29, 72, 0.24), transparent 50%),
+        radial-gradient(circle at 12% 82%, rgba(245, 158, 11, 0.14), transparent 46%);
+    }
+    .rf-glass-bar {
+      background: rgba(11, 13, 16, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    /* Typography */
+    .rf-display {
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", "Segoe UI", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      line-height: 1.05;
+      margin: 0;
+    }
+    .rf-text-muted { color: #94A3B8; }
+    .rf-text-soft { color: #CBD5E1; }
+
+    /* Buttons */
+    .rf-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.15s ease, background-color 0.2s ease, opacity 0.2s ease;
+    }
+    .rf-btn:active { transform: scale(0.97); }
+    .rf-btn-racing { background-color: #E11D48; color: #FFFFFF; box-shadow: 0 10px 24px -5px rgba(225, 29, 72, 0.35); }
+    .rf-btn-racing:hover { background-color: #BE123C; }
+    .rf-btn-gold { background-color: #F59E0B; color: #090A0C; }
+    .rf-btn-gold:hover { background-color: #FBBF24; }
+    .rf-btn-emerald { background-color: #10B981; color: #060709; font-weight: 800; }
+    .rf-btn-emerald:hover { background-color: #34D399; }
+    .rf-btn-dark { background-color: #1A2029; color: #FFFFFF; border: 1px solid #283140; }
+    .rf-btn-dark:hover { background-color: #242C38; }
+
+    /* Grids & Flex Helpers */
+    .rf-grid-2 { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .rf-grid-3 { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    .rf-grid-4 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .rf-grid-8 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+
+    @media (min-width: 640px) {
+      .rf-grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+      .rf-grid-8 { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+    }
+    @media (min-width: 768px) {
+      .rf-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+      .rf-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+    }
+    @media (min-width: 1024px) {
+      .rf-grid-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .rf-grid-5 { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
+      .rf-grid-8 { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+      .rf-hero-grid { display: grid; grid-template-columns: 7fr 5fr; gap: 40px; align-items: center; }
+      .rf-booking-grid { display: grid; grid-template-columns: 7fr 5fr; gap: 32px; align-items: start; }
+      .rf-banner-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 28px; align-items: center; }
+    }
+
+    /* Sticky Header & Mobile Drawer (Fixed overlap on mobile) */
+    .rf-header { position: sticky; top: 0; z-index: 50; border-bottom: 1px solid rgba(40, 49, 64, 0.9); }
+    .rf-header-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; min-height: 64px; padding-top: 8px; padding-bottom: 8px; gap: 8px; }
+    .rf-brand-link { display: flex; align-items: center; gap: 8px; min-width: 0; flex: 1 1 auto; }
+    .rf-brand-title { font-size: 20px; color: #FFFFFF; white-space: nowrap; }
+    .rf-brand-sub { font-size: 10px; color: #94A3B8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .rf-header-actions { display: flex; align-items: center; gap: 6px; flex-shrink: 0; }
+    .rf-wa-label-short { display: inline; }
+    .rf-wa-label-full { display: none; }
+    @media (min-width: 480px) {
+      .rf-brand-title { font-size: 23px; }
+      .rf-brand-sub { font-size: 11px; }
+      .rf-header-actions { gap: 8px; }
+      .rf-wa-label-short { display: none; }
+      .rf-wa-label-full { display: inline; }
+    }
+    @media (min-width: 640px) { .rf-header-inner { min-height: 78px; } }
+    .rf-nav { display: none; align-items: center; gap: 20px; font-size: 14px; font-weight: 600; color: #CBD5E1; }
+    @media (min-width: 1024px) {
+      .rf-nav { display: flex; }
+      .rf-menu-toggle { display: none !important; }
+      .rf-mobile-bar { display: none !important; }
+    }
+    .rf-nav a:hover { color: #FACC15; }
+
+    /* Marquee */
+    @keyframes rfMarquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .rf-marquee-track {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      width: max-content;
+      animation: rfMarquee 28s linear infinite;
+    }
+
+    /* Pulse dot */
+    @keyframes rfPulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.45; transform: scale(1.25); }
+    }
+    .rf-dot-live {
+      width: 8px;
+      height: 8px;
+      border-radius: 9999px;
+      background-color: #34D399;
+      display: inline-block;
+      animation: rfPulse 1.5s infinite;
+    }
+
+    /* Form Controls */
+    .rf-input, .rf-select {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background-color: #1A2029;
+      border: 1px solid #283140;
+      color: #FFFFFF;
+      font-size: 14px;
+      outline: none;
+    }
+    .rf-input:focus, .rf-select:focus { border-color: #E11D48; }
+    .rf-input::placeholder { color: #64748B; }
+
+    /* Aspect ratio helper for video/preview */
+    .rf-video-box {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: linear-gradient(135deg, #191E28 0%, #101319 55%, #080A0D 100%);
+      overflow: hidden;
+    }
+
+
+    .rf-card { transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; }
+    .rf-card:hover { transform: translateY(-2px); border-color: rgba(245, 158, 11, 0.45); box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45); }
+    .rf-v6-pill {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.04em;
+      background: rgba(16, 185, 129, 0.16); color: #6EE7B7;
+      border: 1px solid rgba(52, 211, 153, 0.35);
+      padding: 2px 8px; border-radius: 9999px;
+    }
+
+    /* Hidden utility */
+    .rf-hidden { display: none !important; }
+
+    /* Mobile bottom spacing */
+    body { padding-bottom: 88px; }
+    @media (min-width: 1024px) { body { padding-bottom: 0; } }
+  </style>
+</head>
+<body class="rf-bg-dark">
+
+  <!-- ==================== 1. TOP UTILITY CONTACT BAR ==================== -->
+  <div class="rf-bg-top" style="border-bottom: 1px solid #283140; font-size: 12px; color: #CBD5E1;">
+    <div class="rf-container" style="padding-top: 8px; padding-bottom: 8px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px;">
+      <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+        <span style="display: inline-flex; align-items: center; gap: 6px; color: #34D399; font-weight: 700;">
+          <span class="rf-dot-live"></span>
+          <span>Dubai Mobile Workshop Active</span>
+        </span>
+        <span class="rf-text-muted">• 0 AED Upfront • Pay After Job</span>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+        <a href="mailto:Lilian.ordinario@gmail.com" style="color: #E2E8F0; font-weight: 600;">
+          ✉ Lilian.ordinario@gmail.com
+        </a>
+        <span style="color: #475569;">|</span>
+        <a id="top-phone-link" href="tel:+971508916313" style="color: #FFFFFF; font-weight: 800;">
+          📞 <span id="top-phone-text">+971 50 891 6313</span>
+        </a>
+        <button type="button" onclick="openPhoneModal()" style="font-size: 11px; padding: 3px 8px; border-radius: 6px; background: #1A2029; color: #E2E8F0; border: 1px solid #283140; cursor: pointer;">
+          Edit #
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 2. STICKY MOBILE-FIRST HEADER ==================== -->
+  <header class="rf-header rf-glass-bar">
+    <div class="rf-container">
+      <div class="rf-header-inner">
+        <!-- Brand Logo (Clean spacing so DUBAI badge never overlaps WhatsApp) -->
+        <a href="#top" class="rf-brand-link">
+          <div style="width: 36px; height: 36px; border-radius: 11px; background: linear-gradient(135deg, #E11D48, #9F1239); display: flex; align-items: center; justify-content: center; color: #FFF; font-weight: 900; font-size: 16px; flex-shrink: 0; box-shadow: 0 6px 16px rgba(225,29,72,0.35);">
+            🔧
+          </div>
+          <div style="min-width: 0;">
+            <div style="display: flex; align-items: center; gap: 5px; flex-wrap: nowrap;">
+              <span class="rf-display rf-brand-title">RIDE<span style="color: #E11D48;">FIX</span></span>
+              <span style="font-size: 9px; font-weight: 800; background: #F59E0B; color: #090A0C; padding: 2px 5px; border-radius: 4px; flex-shrink: 0;">DUBAI</span>
+            </div>
+            <div class="rf-brand-sub">We Fix. You Ride. • Mobile Garage</div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="rf-nav">
+          <a href="#media-showcase">Videos &amp; Ad</a>
+          <a href="#why-ridefix">Why RideFix</a>
+          <a href="#packages">Packages &amp; AED Rates</a>
+          <a href="#problem-solver">Problem Solver</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="rf-header-actions">
+          <a id="header-wa-btn" href="https://wa.me/971508916313?text=Hi%20RideFix%20Dubai!%20I%20would%20like%20to%20book%20a%20mobile%20service." target="_blank" rel="noopener" class="rf-btn" style="padding: 8px 10px; border-radius: 11px; background: rgba(16,185,129,0.16); border: 1px solid rgba(52,211,153,0.4); color: #6EE7B7; font-size: 12px; white-space: nowrap;">
+            <span>💬</span>
+            <span class="rf-wa-label-short">WA</span>
+            <span class="rf-wa-label-full">WhatsApp</span>
+          </a>
+          <a href="#booking" class="rf-btn rf-btn-racing" style="padding: 8px 11px; border-radius: 11px; font-size: 12px; white-space: nowrap;">
+            <span>Book →</span>
+          </a>
+          <button type="button" id="mobile-drawer-btn" aria-label="Toggle Menu" class="rf-menu-toggle rf-btn rf-btn-dark" style="padding: 8px 10px; border-radius: 11px; font-size: 14px;">
+            ☰
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-drawer" class="rf-hidden" style="background: #14181F; border-top: 1px solid #283140; padding: 12px 16px 20px;">
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <a href="#media-showcase" onclick="closeDrawer()" style="padding: 10px 12px; border-radius: 12px; background: #1A2029; color: #FACC15; font-size: 14px; font-weight: 700;">★ Videos &amp; Promo Photos</a>
+        <a href="#packages" onclick="closeDrawer()" style="padding: 10px 12px; border-radius: 12px; background: #1A2029; color: #FFFFFF; font-size: 14px; font-weight: 700;">Packages &amp; AED Pricing (Moto, Bike, E-Bike, Golf Cart)</a>
+        <a href="#problem-solver" onclick="closeDrawer()" style="padding: 10px 12px; border-radius: 12px; background: #1A2029; color: #E2E8F0; font-size: 14px; font-weight: 600;">Sound Familiar? Problem Solver</a>
+        <a href="#how-it-works" onclick="closeDrawer()" style="padding: 10px 12px; border-radius: 12px; background: #1A2029; color: #E2E8F0; font-size: 14px; font-weight: 600;">How It Works (4 Simple Steps)</a>
+        <a href="#guides" onclick="closeDrawer()" style="padding: 10px 12px; border-radius: 12px; background: #1A2029; color: #E2E8F0; font-size: 14px; font-weight: 600;">Dubai Rider Care Guides &amp; Reviews</a>
+        <a href="#faq" onclick="closeDrawer()" style="padding: 10px 12px; border-radius: 12px; background: #1A2029; color: #E2E8F0; font-size: 14px; font-weight: 600;">FAQ &amp; Dubai Coverage</a>
+      </div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding-top: 12px; border-top: 1px solid #283140;">
+        <a id="drawer-call-link" href="tel:+971508916313" class="rf-btn rf-btn-dark" style="padding: 11px; border-radius: 12px; font-size: 12px;">📞 Call Now</a>
+        <a href="mailto:Lilian.ordinario@gmail.com" class="rf-btn rf-btn-dark" style="padding: 11px; border-radius: 12px; font-size: 12px; color: #FACC15;">✉ Email RideFix</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== 3. HERO SECTION ==================== -->
+  <section id="top" class="rf-section rf-hero-ambient rf-carbon-dots" style="padding-top: 28px; padding-bottom: 44px;">
+    <div class="rf-container">
+      <div class="rf-hero-grid" style="display: grid; gap: 28px;">
+        <!-- Left Hero Copy -->
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 9999px; background: #1A2029; border: 1px solid #283140; color: #FACC15; font-size: 12px; font-weight: 700; width: fit-content;">
+            <span>🛡️ Ride Safe. Ride Happy. • Serving All Dubai Communities</span> <span class="rf-v6-pill">v11 LIVE READY</span>
+          </div>
+
+          <h1 class="rf-display" style="font-size: clamp(36px, 6vw, 62px); color: #FFFFFF;">
+            We Fix. <span style="color: #E11D48;">You Ride.</span><br />
+            <span style="color: #FACC15;">Doorstep Garage Dubai.</span>
+          </h1>
+
+          <p style="margin: 0; font-size: 15px; color: #CBD5E1; max-width: 640px;">
+            Mobile Motorcycle, Bike, E-Bike &amp; Golf Cart Workshop Across All of Dubai — We Come to Your Home, Building, or Office. No towing fees, no workshop queues, and <strong style="color: #FFFFFF;">0 AED upfront payment</strong>.
+          </p>
+
+          <!-- Primary Hero Buttons -->
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; padding-top: 4px;">
+            <a href="#booking" class="rf-btn rf-btn-racing" style="padding: 14px 20px; border-radius: 14px; font-size: 14px; flex: 1 1 210px;">
+              <span>📅 Book Mobile Service (60 Sec)</span>
+            </a>
+            <a id="hero-wa-btn" href="https://wa.me/971508916313?text=Hi%20RideFix%20Dubai!%20I%20want%20to%20book%20a%20service." target="_blank" rel="noopener" class="rf-btn rf-btn-dark" style="padding: 14px 20px; border-radius: 14px; font-size: 14px; flex: 1 1 210px;">
+              <span style="color: #34D399;">💬</span>
+              <span>WhatsApp +971 50 891 6313</span>
+            </a>
+          </div>
+
+          <!-- 4 Category Price Cards -->
+          <div class="rf-grid-4" style="padding-top: 6px;">
+            <button type="button" onclick="selectCategoryTab('bicycles')" class="rf-card" style="padding: 14px; text-align: left; cursor: pointer; background: #14181F;">
+              <div style="display: flex; justify-content: space-between; font-size: 12px; color: #94A3B8; margin-bottom: 4px;">
+                <span>Bikes</span>
+                <span>🚲</span>
+              </div>
+              <div class="rf-display" style="font-size: 19px; color: #FFFFFF;">From <span style="color: #FACC15;">150 AED</span></div>
+            </button>
+
+            <button type="button" onclick="selectCategoryTab('motorcycles')" class="rf-card" style="padding: 14px; text-align: left; cursor: pointer; background: #14181F; border-color: rgba(225,29,72,0.5);">
+              <div style="display: flex; justify-content: space-between; font-size: 12px; color: #94A3B8; margin-bottom: 4px;">
+                <span>Motorcycles</span>
+                <span>🏍️</span>
+              </div>
+              <div class="rf-display" style="font-size: 19px; color: #FFFFFF;">From <span style="color: #E11D48;">199 AED</span></div>
+            </button>
+
+            <button type="button" onclick="selectCategoryTab('ebikes')" class="rf-card" style="padding: 14px; text-align: left; cursor: pointer; background: #14181F;">
+              <div style="display: flex; justify-content: space-between; font-size: 12px; color: #94A3B8; margin-bottom: 4px;">
+                <span>E-Bikes/Scooters</span>
+                <span>⚡</span>
+              </div>
+              <div class="rf-display" style="font-size: 19px; color: #FFFFFF;">From <span style="color: #FACC15;">175 AED</span></div>
+            </button>
+
+            <button type="button" onclick="selectCategoryTab('golfcarts')" class="rf-card" style="padding: 14px; text-align: left; cursor: pointer; background: #14181F;">
+              <div style="display: flex; justify-content: space-between; font-size: 12px; color: #94A3B8; margin-bottom: 4px;">
+                <span>Golf Carts</span>
+                <span>⛳</span>
+              </div>
+              <div class="rf-display" style="font-size: 19px; color: #FFFFFF;">From <span style="color: #34D399;">299 AED</span></div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Hero Card: Fixed Video & Photo Showcase -->
+        <div class="rf-card" style="overflow: hidden; box-shadow: 0 24px 48px rgba(0,0,0,0.75);">
+          <div style="padding: 10px 14px; background: #090B0E; border-bottom: 1px solid #283140; display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span style="width: 8px; height: 8px; border-radius: 9999px; background: #E11D48; display: inline-block;"></span>
+              <span style="font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; color: #FFFFFF;">RideFix Workshop Spot</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <button type="button" id="hero-mode-video" onclick="setHeroMode('video')" class="rf-btn rf-btn-racing" style="padding: 5px 10px; border-radius: 8px; font-size: 11px;">🎬 Video</button>
+              <button type="button" id="hero-mode-photo" onclick="setHeroMode('photo')" class="rf-btn rf-btn-dark" style="padding: 5px 10px; border-radius: 8px; font-size: 11px;">🖼️ Photo</button>
+            </div>
+          </div>
+
+          <div class="rf-video-box">
+            <video id="hero-video-player" style="width: 100%; height: 100%; object-fit: cover; background: #07090D;" controls playsinline preload="metadata" poster="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='450' viewBox='0 0 800 450'%3E%3Crect width='800' height='450' fill='%230D1016'/%3E%3Ccircle cx='650' cy='90' r='180' fill='%23E11D48' fill-opacity='0.18'/%3E%3Ctext x='48' y='190' fill='%23FACC15' font-family='Arial,sans-serif' font-size='22' font-weight='bold'%3ERIDEFIX DUBAI MOBILE GARAGE%3C/text%3E%3Ctext x='48' y='240' fill='%23FFFFFF' font-family='Arial,sans-serif' font-size='44' font-weight='bold'%3Evideo_1.mov READY%3C/text%3E%3Ctext x='48' y='282' fill='%23CBD5E1' font-family='Arial,sans-serif' font-size='20'%3EMotorcycle Oil Change &amp; Doorstep Repair%3C/text%3E%3C/svg%3E">
+              <source src="video_1.mov" type="video/quicktime">
+              <source src="video_1.mp4" type="video/mp4">
+            </video>
+
+            <div id="hero-photo-card" class="rf-hidden" style="width: 100%; height: 100%; padding: 14px; display: flex; flex-direction: column; justify-content: space-between; background: linear-gradient(135deg, #161B24 0%, #0B0D10 100%);">
+              <div style="display: flex; align-items: center; justify-content: space-between; gap: 6px; flex-wrap: wrap;">
+                <span id="story-badge" style="padding: 4px 10px; border-radius: 8px; background: #E11D48; color: #FFFFFF; font-size: 11px; font-weight: 700;">
+                  Photo 1 / 4 • Oil Drain &amp; Inspection
+                </span>
+                <span style="padding: 4px 10px; border-radius: 8px; background: rgba(0,0,0,0.75); border: 1px solid rgba(255,255,255,0.12); color: #FACC15; font-size: 11px; font-weight: 700;">
+                  Fixed Promo Visual
+                </span>
+              </div>
+
+              <div style="background: rgba(0,0,0,0.68); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 12px; display: flex; align-items: center; gap: 12px; margin: auto 0;">
+                <div style="width: 48px; height: 48px; border-radius: 14px; background: linear-gradient(135deg, #E11D48, #F59E0B); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0;">
+                  🛢️
+                </div>
+                <div style="min-width: 0;">
+                  <div id="story-title" class="rf-display" style="font-size: 17px; color: #FFFFFF;">Precision Engine Oil Drain &amp; Filter Check</div>
+                  <p id="story-desc" style="margin: 4px 0 0; font-size: 12px; color: #CBD5E1;">
+                    RideFix technician drains used oil on the hydraulic lift and inspects the sportbike engine &amp; seals.
+                  </p>
+                </div>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 8px;">
+                <div style="width: 100%; height: 6px; background: #1E293B; border-radius: 9999px; overflow: hidden;">
+                  <div id="story-progress" style="width: 25%; height: 100%; background: linear-gradient(90deg, #E11D48, #FACC15); transition: width 0.3s ease;"></div>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+                  <div style="display: flex; align-items: center; gap: 6px;">
+                    <button type="button" onclick="stepStory(-1)" class="rf-btn rf-btn-dark" style="padding: 5px 9px; border-radius: 8px; font-size: 11px;">⏮</button>
+                    <button type="button" id="story-play-btn" onclick="toggleStory()" class="rf-btn rf-btn-racing" style="padding: 5px 10px; border-radius: 8px; font-size: 11px;">⏸ Auto</button>
+                    <button type="button" onclick="stepStory(1)" class="rf-btn rf-btn-dark" style="padding: 5px 9px; border-radius: 8px; font-size: 11px;">⏭</button>
+                  </div>
+                  <a href="#media-showcase" style="font-size: 11px; font-weight: 700; color: #FACC15;">All Photos &amp; Video →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="padding: 10px 14px; background: #0D1015; border-top: 1px solid #283140; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px; font-size: 12px;">
+            <span style="color: #94A3B8;">Direct Dispatch:</span>
+            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-weight: 700;">
+              <a href="tel:+971508916313" style="color: #FFFFFF;">+971 50 891 6313</a>
+              <span style="color: #475569;">•</span>
+              <a href="mailto:Lilian.ordinario@gmail.com" style="color: #FACC15;">Lilian.ordinario@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 4. PROMO AD BANNER & LIVE MEDIA UPLOADER ==================== -->
+  <section id="media-showcase" class="rf-section rf-bg-darker">
+    <div class="rf-container" style="display: flex; flex-direction: column; gap: 28px;">
+      <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px;">
+        <div style="max-width: 720px;">
+          <div style="font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: #FACC15;">Fixed Campaign Video &amp; Visuals</div>
+          <h2 class="rf-display" style="font-size: clamp(30px, 5vw, 48px); color: #FFFFFF; margin-top: 4px;">
+            Motorcycle Repair <span style="color: #E11D48;">&amp; Change Oil</span>
+          </h2>
+          <p style="margin: 8px 0 0; font-size: 14px; color: #94A3B8;">
+            Keep Your Bike in Top Condition! Fixed workshop video &amp; photo showcase ready out of the box—no upload needed.
+          </p>
+        </div>
+      </div>
+
+      <!-- Fixed Video & Photo Strip -->
+      <div class="rf-grid-3">
+        <div class="rf-card" style="overflow: hidden;">
+          <video controls playsinline preload="metadata" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #07090D;">
+            <source src="video_1.mov" type="video/quicktime">
+            <source src="video_1.mp4" type="video/mp4">
+          </video>
+          <div style="padding: 12px 14px; display: flex; justify-content: space-between; align-items: center; gap: 8px;">
+            <div>
+              <div style="font-size: 13px; font-weight: 800; color: #FFFFFF;">Workshop Video Clip</div>
+              <div style="font-size: 11px; color: #94A3B8;">Mobile oil change &amp; tune-up</div>
+            </div>
+            <span style="background: #E11D48; color: #FFFFFF; font-size: 10px; font-weight: 800; padding: 3px 8px; border-radius: 6px;">FIXED VIDEO</span>
+          </div>
+        </div>
+
+        <div class="rf-card" style="overflow: hidden;">
+          <img src="Motorcycle Repair and Oil Change Ad_2.png" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" alt="Motorcycle Repair and Oil Change Ad" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; background: #11151C;" />
+          <div style="display: none; width: 100%; aspect-ratio: 16/9; padding: 16px; background: linear-gradient(135deg, #1E1318 0%, #10141B 100%); flex-direction: column; justify-content: center; gap: 6px;">
+            <span style="font-size: 11px; font-weight: 800; color: #FACC15;">PROMO PHOTO 01</span>
+            <div class="rf-display" style="font-size: 22px; color: #FFFFFF;">MOTORCYCLE REPAIR &amp; OIL CHANGE</div>
+            <div style="font-size: 12px; color: #CBD5E1;">Ride Safe. Ride Happy. • Packages from 199 AED</div>
+          </div>
+          <div style="padding: 12px 14px; display: flex; justify-content: space-between; align-items: center; gap: 8px;">
+            <div>
+              <div style="font-size: 13px; font-weight: 800; color: #FFFFFF;">Oil Change &amp; Repair Poster</div>
+              <div style="font-size: 11px; color: #94A3B8;">Dubai doorstep mobile service</div>
+            </div>
+            <span style="background: #F59E0B; color: #090A0C; font-size: 10px; font-weight: 800; padding: 3px 8px; border-radius: 6px;">FIXED PHOTO</span>
+          </div>
+        </div>
+
+        <div class="rf-card" style="overflow: hidden;">
+          <div style="width: 100%; aspect-ratio: 16/9; padding: 16px; background: linear-gradient(135deg, #111827 0%, #0B0D10 100%); display: flex; flex-direction: column; justify-content: space-between;">
+            <span style="font-size: 11px; font-weight: 800; color: #34D399; width: fit-content; background: rgba(16,185,129,0.14); padding: 3px 8px; border-radius: 6px;">4-VEHICLE COVERAGE</span>
+            <div>
+              <div class="rf-display" style="font-size: 21px; color: #FFFFFF;">MOTO • BIKE • E-BIKE • CART</div>
+              <div style="font-size: 12px; color: #CBD5E1; margin-top: 4px;">0 AED upfront • Cash or Bank Transfer after job</div>
+            </div>
+          </div>
+          <div style="padding: 12px 14px; display: flex; justify-content: space-between; align-items: center; gap: 8px;">
+            <div>
+              <div style="font-size: 13px; font-weight: 800; color: #FFFFFF;">Doorstep Service Card</div>
+              <div style="font-size: 11px; color: #94A3B8;">All Dubai communities covered</div>
+            </div>
+            <span style="background: #10B981; color: #060709; font-size: 10px; font-weight: 800; padding: 3px 8px; border-radius: 6px;">FIXED PHOTO</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Graphic Promo Ad Banner -->
+      <div style="border-radius: 24px; overflow: hidden; border: 2px solid rgba(245, 158, 11, 0.5); background: linear-gradient(135deg, #0D1016 0%, #171C26 55%, #0B0D10 100%); box-shadow: 0 20px 45px rgba(0,0,0,0.65);">
+        <div class="rf-banner-grid" style="display: grid; gap: 20px; padding: 20px;">
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="display: inline-block; width: fit-content; background: #FACC15; color: #090A0C; font-weight: 900; text-transform: uppercase; padding: 5px 14px; border-radius: 8px; font-size: 13px; transform: rotate(-1.5deg);">
+              Ride Safe... Ride Happy...
+            </div>
+
+            <div class="rf-card-inner" style="padding: 16px; display: flex; flex-direction: column; gap: 10px;">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <div style="width: 44px; height: 44px; border-radius: 12px; background: #E11D48; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;">🔧</div>
+                <div>
+                  <div class="rf-display" style="font-size: 17px; color: #FFFFFF;">RIDEFIX MOBILE SERVICE</div>
+                  <div style="font-size: 12px; color: #FACC15;">Certified Garage Tools at Your Doorstep</div>
+                </div>
+              </div>
+              <div style="border-top: 1px solid #283140; padding-top: 10px; font-size: 13px; font-weight: 700; color: #FFFFFF; display: flex; flex-direction: column; gap: 6px;">
+                <div>✅ Professional Service</div>
+                <div>✅ Affordable Price (Packages from 150 AED)</div>
+                <div>✅ Fast &amp; Reliable All Over Dubai</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;">
+              <div>
+                <div class="rf-display" style="font-size: clamp(32px, 5vw, 52px); color: #FFFFFF;">
+                  MOTORCYCLE <span style="color: #FACC15;">REPAIR</span>
+                </div>
+                <div style="display: inline-block; margin-top: 6px; background: #E11D48; padding: 6px 14px; border-radius: 10px;">
+                  <span class="rf-display" style="font-size: clamp(20px, 3.5vw, 32px); color: #FFFFFF;">&amp; CHANGE OIL</span>
+                </div>
+              </div>
+
+              <div style="background: linear-gradient(135deg, #E11D48, #881337); border: 2px solid #FACC15; border-radius: 16px; padding: 12px 16px; text-align: center;">
+                <div class="rf-display" style="font-size: 16px; color: #FACC15;">CHANGE OIL REGULARLY!</div>
+                <div style="font-size: 12px; font-weight: 700; color: #FFFFFF; margin-top: 2px;">For a Longer Engine Life</div>
+              </div>
+            </div>
+
+            <div style="color: #FACC15; font-weight: 800; font-style: italic; font-size: clamp(17px, 2.5vw, 24px);">
+              Keep Your Bike in Top Condition!
+            </div>
+          </div>
+        </div>
+
+        <!-- 8 Core Service Buttons -->
+        <div style="background: #07080B; border-top: 1px solid #283140; padding: 16px;">
+          <div class="rf-grid-8">
+            <button type="button" onclick="bookPreset('Motorcycle', 'Standard Service — Oil & Filter Change (399 AED)', 399)" class="rf-card-inner" style="padding: 12px 8px; text-align: center; cursor: pointer; background: #14181F;">
+              <div style="font-size: 20px; margin-bottom: 4px;">🛢️</div>
+              <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #FFFFFF;">Engine Oil Change</div>
+            </button>
+            <button type="button" onclick="bookPreset('Motorcycle', 'Essential Motorcycle Service (199 AED)', 199)" class="rf-card-inner" style="padding: 12px 8px; text-align: center; cursor: pointer; background: #14181F;">
+              <div style="font-size: 20px; margin-bottom: 4px;">🔧</div>
+              <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #FFFFFF;">Motorcycle Repair</div>
+            </button>
+            <button type="button" onclick="bookPreset('Motorcycle', 'Brake Inspection & Repair (Quote / From 100 AED)', 100)" class="rf-card-inner" style="padding: 12px 8px; text-align: center; cursor: pointer; background: #14181F;">
+              <div style="font-size: 20px; margin-bottom: 4px;">🛑</div>
+              <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #FFFFFF;">Brake Inspection</div>
+            </button>
+            <button type="button" onclick="bookPreset('Motorcycle', 'Tire Replacement & Balancing (Quote)', 0)" class="rf-card-inner" style="padding: 12px 8px; text-align: center; cursor: pointer; background: #14181F;">
+              <div style="font-size: 20px; margin-bottom: 4px;">🛞</div>
+              <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #FFFFFF;">Tire Replacement</div>
+            </button>
+            <button type="button" onclick="bookPreset('Motorcycle', 'Battery Replacement & Charging Check (Quote)', 0)" class="rf-card-inner" style="padding: 12px 8px; text-align: center; cursor: pointer; background: #14181F;">
+              <div style="font-size: 20px; margin-bottom: 4px;">🔋</div>
+              <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #FFFFFF;">Battery Check</div>
+            </button>
+            <button type="button" onclick="bookPreset('Motorcycle', 'Engine Tune-Up & Diagnostics (Quote)', 0)" class="rf-card-inner" style="padding: 12px 8px; text-align: center; cursor: pointer; background: #14181F;">
+              <div style="font-size: 20px; margin-bottom: 4px;">⚙️</div>
+              <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #FFFFFF;">Engine Tune-Up</div>
+            </button>
+            <button type="button" onclick="bookPreset('Motorcycle', 'Premium Service + Full Detailing Wash (699 AED)', 699)" class="rf-card-inner" style="padding: 12px 8px; text-align: center; cursor: pointer; background: #14181F;">
+              <div style="font-size: 20px; margin-bottom: 4px;">✨</div>
+              <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #FFFFFF;">Bike Cleaning</div>
+            </button>
+            <button type="button" onclick="bookPreset('Motorcycle', 'General Maintenance & Multi-Point Check (199 AED)', 199)" class="rf-card-inner" style="padding: 12px 8px; text-align: center; cursor: pointer; background: #14181F;">
+              <div style="font-size: 20px; margin-bottom: 4px;">📋</div>
+              <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #FFFFFF;">General Care</div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Bottom Action Strip -->
+        <div style="background: linear-gradient(90deg, #E11D48, #9F1239 55%, #0B0D10); padding: 14px 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;">
+          <a href="#booking" class="rf-btn" style="background: #FFFFFF; color: #E11D48; padding: 10px 18px; border-radius: 12px; font-size: 15px; font-weight: 900;">
+            🔧 BOOK NOW!
+          </a>
+          <div class="rf-display" style="font-size: clamp(16px, 2.8vw, 24px); color: #FFFFFF;">
+            RIDE <span style="color: #FACC15;">SAFE.</span> RIDE WITH <span style="color: #FACC15;">CONFIDENCE!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 5. SCROLLING TICKER ==================== -->
+  <div style="background: #FACC15; color: #090A0C; padding: 10px 0; overflow: hidden; border-bottom: 1px solid rgba(0,0,0,0.15); font-weight: 900; text-transform: uppercase; font-size: 13px;">
+    <div class="rf-marquee-track">
+      <span>★ Engine Oil Change (399 AED)</span>
+      <span>•</span>
+      <span>Essential Motorcycle Care (199 AED)</span>
+      <span>•</span>
+      <span>Premium Overhaul + Wash (699 AED)</span>
+      <span>•</span>
+      <span>Bicycles From 150 AED</span>
+      <span>•</span>
+      <span>E-Bikes &amp; Scooters From 175 AED</span>
+      <span>•</span>
+      <span>Golf Carts From 299 AED</span>
+      <span>•</span>
+      <span>0 AED Upfront • Pay After Job</span>
+      <span>•</span>
+      <span>★ Engine Oil Change (399 AED)</span>
+      <span>•</span>
+      <span>Essential Motorcycle Care (199 AED)</span>
+      <span>•</span>
+      <span>Premium Overhaul + Wash (699 AED)</span>
+      <span>•</span>
+      <span>Bicycles From 150 AED</span>
+      <span>•</span>
+      <span>E-Bikes &amp; Scooters From 175 AED</span>
+      <span>•</span>
+      <span>Golf Carts From 299 AED</span>
+    </div>
+  </div>
+
+  <!-- ==================== 6. WHY RIDEFIX GRID ==================== -->
+  <section id="why-ridefix" class="rf-section rf-bg-dark">
+    <div class="rf-container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 36px;">
+        <div style="font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: #E11D48;">Why Dubai Riders Choose RideFix</div>
+        <h2 class="rf-display" style="font-size: clamp(30px, 5vw, 48px); color: #FFFFFF; margin-top: 6px;">
+          RideFix <span style="color: #FACC15;">At A Glance</span>
+        </h2>
+        <p style="margin: 10px 0 0; font-size: 14px; color: #94A3B8;">
+          Built for busy riders, commuters, and villa owners across Dubai who want doorstep service without waiting in workshop queues.
+        </p>
+      </div>
+
+      <div class="rf-grid-5" style="display: grid; gap: 14px;">
+        <div class="rf-card" style="padding: 18px;">
+          <div style="font-size: 24px; margin-bottom: 10px;">📍</div>
+          <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #94A3B8;">Coverage</div>
+          <div class="rf-display" style="font-size: 20px; color: #FFFFFF; margin-top: 2px;">All of Dubai</div>
+          <p style="margin: 8px 0 0; font-size: 12px; color: #94A3B8;">Marina, JBR, JLT, Palm, Downtown, Business Bay, JVC, Al Barsha, Dubai Hills, Arabian Ranches, Mirdif, Deira &amp; DSO.</p>
+        </div>
+
+        <div class="rf-card" style="padding: 18px;">
+          <div style="font-size: 24px; margin-bottom: 10px;">💳</div>
+          <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #94A3B8;">Payment</div>
+          <div class="rf-display" style="font-size: 20px; color: #FFFFFF; margin-top: 2px;">Pay After Job (0 AED)</div>
+          <p style="margin: 8px 0 0; font-size: 12px; color: #94A3B8;">Book with 0 AED online. Pay via Cash or Instant UAE Bank Transfer only after your ride is serviced.</p>
+        </div>
+
+        <div class="rf-card" style="padding: 18px;">
+          <div style="font-size: 24px; margin-bottom: 10px;">🏅</div>
+          <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #94A3B8;">Experience</div>
+          <div class="rf-display" style="font-size: 20px; color: #FFFFFF; margin-top: 2px;">Brand-Trained Pros</div>
+          <p style="margin: 8px 0 0; font-size: 12px; color: #94A3B8;">Equipped with torque wrenches, diagnostics, and protective drip mats for apartment basements or villas.</p>
+        </div>
+
+        <div class="rf-card" style="padding: 18px;">
+          <div style="font-size: 24px; margin-bottom: 10px;">⭐</div>
+          <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #94A3B8;">Rider Rating</div>
+          <div class="rf-display" style="font-size: 20px; color: #FFFFFF; margin-top: 2px;">4.9 / 5 Stars</div>
+          <p style="margin: 8px 0 0; font-size: 12px; color: #94A3B8;">Trusted by 49+ verified Dubai riders &amp; villa owners for punctual arrivals and honest pricing.</p>
+        </div>
+
+        <div class="rf-card" style="padding: 18px;">
+          <div style="font-size: 24px; margin-bottom: 10px;">🗣️</div>
+          <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #94A3B8;">Languages</div>
+          <div class="rf-display" style="font-size: 20px; color: #34D399; margin-top: 2px;">EN • TL • AR</div>
+          <p style="margin: 8px 0 0; font-size: 12px; color: #94A3B8;">Easy communication in English, Tagalog, and Arabic via WhatsApp, call, or email.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 7. PRICING PACKAGES (AED) ==================== -->
+  <section id="packages" class="rf-section rf-bg-darker">
+    <div class="rf-container" style="display: flex; flex-direction: column; gap: 36px;">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto;">
+        <div style="font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: #FACC15;">Transparent AED Rate Card</div>
+        <h2 class="rf-display" style="font-size: clamp(30px, 5vw, 48px); color: #FFFFFF; margin-top: 6px;">
+          Service Packages &amp; <span style="color: #E11D48;">Doorstep Pricing</span>
+        </h2>
+        <p style="margin: 10px 0 0; font-size: 14px; color: #94A3B8;">
+          Filter by vehicle category or tap any package to load it straight into the booking calculator.
+        </p>
+      </div>
+
+      <!-- Category Tabs -->
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;">
+        <button type="button" onclick="selectCategoryTab('all')" id="tab-all" class="cat-tab rf-btn rf-btn-racing" style="padding: 10px 14px; border-radius: 12px; font-size: 12px;">All Vehicles</button>
+        <button type="button" onclick="selectCategoryTab('motorcycles')" id="tab-motorcycles" class="cat-tab rf-btn rf-btn-dark" style="padding: 10px 14px; border-radius: 12px; font-size: 12px;">Motorcycles (From 199 AED)</button>
+        <button type="button" onclick="selectCategoryTab('bicycles')" id="tab-bicycles" class="cat-tab rf-btn rf-btn-dark" style="padding: 10px 14px; border-radius: 12px; font-size: 12px;">Bicycles (From 150 AED)</button>
+        <button type="button" onclick="selectCategoryTab('ebikes')" id="tab-ebikes" class="cat-tab rf-btn rf-btn-dark" style="padding: 10px 14px; border-radius: 12px; font-size: 12px;">E-Bikes &amp; Scooters (From 175 AED)</button>
+        <button type="button" onclick="selectCategoryTab('golfcarts')" id="tab-golfcarts" class="cat-tab rf-btn rf-btn-dark" style="padding: 10px 14px; border-radius: 12px; font-size: 12px;">Golf Carts (From 299 AED)</button>
+      </div>
+
+      <!-- A. MOTORCYCLES -->
+      <div id="panel-motorcycles" class="package-panel" style="display: flex; flex-direction: column; gap: 20px;">
+        <div style="border-bottom: 1px solid #283140; padding-bottom: 12px;">
+          <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #E11D48;">Category 01 • Motorcycles</div>
+          <h3 class="rf-display" style="font-size: 28px; color: #FFFFFF; margin-top: 2px;">Motorcycle Service Packages</h3>
+        </div>
+
+        <div class="rf-grid-3">
+          <div class="rf-card" style="padding: 20px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px;">
+            <div>
+              <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #94A3B8;">Essential • ~45–60 min</div>
+              <div class="rf-display" style="font-size: 24px; color: #FFFFFF; margin-top: 4px;">Essential Care</div>
+              <div style="margin-top: 8px;"><span class="rf-display" style="font-size: 38px; color: #FFFFFF;">199</span> <strong style="color: #FACC15;">AED</strong></div>
+              <ul style="margin: 14px 0 0; padding-left: 18px; font-size: 13px; color: #CBD5E1; display: flex; flex-direction: column; gap: 6px;">
+                <li>Drive chain degrease, lube &amp; tension check</li>
+                <li>Brake adjustment &amp; pad thickness check</li>
+                <li>Tyre pressure &amp; tread inspection</li>
+                <li>Chassis bolts, lights, horn &amp; battery check</li>
+              </ul>
+            </div>
+            <button type="button" onclick="bookPreset('Motorcycle', 'Essential Service (199 AED)', 199)" class="rf-btn rf-btn-dark" style="width: 100%; padding: 12px; border-radius: 14px; font-size: 13px;">
+              Select Essential — 199 AED
+            </button>
+          </div>
+
+          <div class="rf-card" style="padding: 20px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px; border: 2px solid #E11D48; background: linear-gradient(180deg, #21141B 0%, #14181F 100%);">
+            <div>
+              <div style="display: inline-block; background: #E11D48; color: #FFFFFF; font-size: 10px; font-weight: 800; text-transform: uppercase; padding: 3px 10px; border-radius: 9999px;">★ Most Booked • Up to 4L Oil + Filter</div>
+              <div class="rf-display" style="font-size: 24px; color: #FFFFFF; margin-top: 8px;">Standard Oil &amp; Tune</div>
+              <div style="margin-top: 8px;"><span class="rf-display" style="font-size: 38px; color: #FACC15;">399</span> <strong style="color: #FFFFFF;">AED</strong></div>
+              <ul style="margin: 14px 0 0; padding-left: 18px; font-size: 13px; color: #FFFFFF; display: flex; flex-direction: column; gap: 6px;">
+                <li><strong>Everything in Essential Care (199 AED)</strong></li>
+                <li><strong>Up to 4L Semi-Synthetic Oil + Oil Filter</strong></li>
+                <li>Air filter inspection &amp; cleaning</li>
+                <li>Throttle &amp; clutch cable lube/adjustment</li>
+              </ul>
+            </div>
+            <button type="button" onclick="bookPreset('Motorcycle', 'Standard Service — Oil & Filter (399 AED)', 399)" class="rf-btn rf-btn-racing" style="width: 100%; padding: 13px; border-radius: 14px; font-size: 13px;">
+              Select Standard — 399 AED
+            </button>
+          </div>
+
+          <div class="rf-card" style="padding: 20px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px; border-color: rgba(245,158,11,0.5);">
+            <div>
+              <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #FACC15;">Premium • ~2–2.5 hrs</div>
+              <div class="rf-display" style="font-size: 24px; color: #FFFFFF; margin-top: 4px;">Premium Overhaul + Wash</div>
+              <div style="margin-top: 8px;"><span class="rf-display" style="font-size: 38px; color: #FFFFFF;">699</span> <strong style="color: #FACC15;">AED</strong></div>
+              <ul style="margin: 14px 0 0; padding-left: 18px; font-size: 13px; color: #CBD5E1; display: flex; flex-direction: column; gap: 6px;">
+                <li><strong>Everything in Standard Oil &amp; Tune (399 AED)</strong></li>
+                <li>Full motorcycle wash, degreaser &amp; polish</li>
+                <li>Charging system &amp; suspension check</li>
+                <li>Digital health &amp; photo inspection summary</li>
+              </ul>
+            </div>
+            <button type="button" onclick="bookPreset('Motorcycle', 'Premium Service + Full Wash & Report (699 AED)', 699)" class="rf-btn rf-btn-gold" style="width: 100%; padding: 12px; border-radius: 14px; font-size: 13px;">
+              Select Premium — 699 AED
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- B. BICYCLES -->
+      <div id="panel-bicycles" class="package-panel" style="display: flex; flex-direction: column; gap: 20px;">
+        <div style="border-bottom: 1px solid #283140; padding-bottom: 12px;">
+          <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #FACC15;">Category 02 • Bicycles</div>
+          <h3 class="rf-display" style="font-size: 28px; color: #FFFFFF; margin-top: 2px;">Bicycle Service Packages</h3>
+        </div>
+        <div class="rf-grid-3">
+          <div class="rf-card" style="padding: 20px; display: flex; flex-direction: column; justify-content: space-between; gap: 14px;">
+            <div>
+              <div style="font-size: 11px; font-weight: 800; color: #94A3B8;">BICYCLE BASIC</div>
+              <div class="rf-display" style="font-size: 22px; color: #FFFFFF; margin-top: 4px;">Safety &amp; Tune</div>
+              <div style="margin-top: 6px;"><span class="rf-display" style="font-size: 34px; color: #FFFFFF;">150</span> <strong style="color: #FACC15;">AED</strong></div>
+              <p style="margin: 8px 0 0; font-size: 13px; color: #CBD5E1;">Gear indexing, brake adjustment, chain lube, tyre PSI &amp; bolt torque check.</p>
+            </div>
+            <button type="button" onclick="bookPreset('Bicycle', 'Bicycle Basic Service (150 AED)', 150)" class="rf-btn rf-btn-dark" style="width: 100%; padding: 11px; border-radius: 12px; font-size: 13px;">Select Basic — 150 AED</button>
+          </div>
+
+          <div class="rf-card" style="padding: 20px; display: flex; flex-direction: column; justify-content: space-between; gap: 14px; border: 2px solid #F59E0B;">
+            <div>
+              <div style="font-size: 11px; font-weight: 800; color: #FACC15;">BICYCLE STANDARD • POPULAR</div>
+              <div class="rf-display" style="font-size: 22px; color: #FFFFFF; margin-top: 4px;">Drivetrain Deep Clean</div>
+              <div style="margin-top: 6px;"><span class="rf-display" style="font-size: 34px; color: #FACC15;">200</span> <strong style="color: #FFFFFF;">AED</strong></div>
+              <p style="margin: 8px 0 0; font-size: 13px; color: #CBD5E1;">Basic tune + sand degreasing of chain/cassette/chainring &amp; wheel truing.</p>
+            </div>
+            <button type="button" onclick="bookPreset('Bicycle', 'Bicycle Standard Service (200 AED)', 200)" class="rf-btn rf-btn-gold" style="width: 100%; padding: 11px; border-radius: 12px; font-size: 13px;">Select Standard — 200 AED</button>
+          </div>
+
+          <div class="rf-card" style="padding: 20px; display: flex; flex-direction: column; justify-content: space-between; gap: 14px;">
+            <div>
+              <div style="font-size: 11px; font-weight: 800; color: #94A3B8;">BICYCLE PREMIUM</div>
+              <div class="rf-display" style="font-size: 22px; color: #FFFFFF; margin-top: 4px;">Pro Overhaul + Bleed</div>
+              <div style="margin-top: 6px;"><span class="rf-display" style="font-size: 34px; color: #FFFFFF;">250</span> <strong style="color: #FACC15;">AED</strong></div>
+              <p style="margin: 8px 0 0; font-size: 13px; color: #CBD5E1;">Standard service + hydraulic brake bleed, bearing check &amp; wash.</p>
+            </div>
+            <button type="button" onclick="bookPreset('Bicycle', 'Bicycle Premium Overhaul (250 AED)', 250)" class="rf-btn rf-btn-dark" style="width: 100%; padding: 11px; border-radius: 12px; font-size: 13px;">Select Premium — 250 AED</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- C. E-BIKES & SCOOTERS -->
+      <div id="panel-ebikes" class="package-panel" style="display: flex; flex-direction: column; gap: 20px;">
+        <div style="border-bottom: 1px solid #283140; padding-bottom: 12px;">
+          <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #FACC15;">Category 03 • E-Bikes, Scooters &amp; Sur-Ron</div>
+          <h3 class="rf-display" style="font-size: 28px; color: #FFFFFF; margin-top: 2px;">E-Bike &amp; Electric Scooter Packages</h3>
+        </div>
+        <div class="rf-grid-3">
+          <div class="rf-card" style="padding: 20px; display: flex; flex-direction: column; justify-content: space-between; gap: 14px;">
+            <div>
+              <div style="font-size: 11px; font-weight: 800; color: #94A3B8;">E-BIKE / SCOOTER BASIC</div>
+              <div class="rf-display" style="font-size: 22px; color: #FFFFFF; margin-top: 4px;">Safety &amp; Folding Check</div>
+              <div style="margin-top: 6px;"><span class="rf-display" style="font-size: 34px; color: #FFFFFF;">175</span> <strong style="color: #FACC15;">AED</strong></div>
+              <p style="margin: 8px 0 0; font-size: 13px; color: #CBD5E1;">Brake calibration, folding stem latch check, tyre PSI &amp; throttle/display check.</p>
+            </div>
+            <button type="button" onclick="bookPreset('E-Bike / Scooter', 'E-Bike / Scooter Basic (175 AED)', 175)" class="rf-btn rf-btn-dark" style="width: 100%; padding: 11px; border-radius: 12px; font-size: 13px;">Select Basic — 175 AED</button>
+          </div>
+
+          <div class="rf-card" style="padding: 20px; display: flex; flex-direction: column; justify-content: space-between; gap: 14px; border: 2px solid #E11D48;">
+            <div>
+              <div style="font-size: 11px; font-weight: 800; color: #E11D48;">E-BIKE / SCOOTER STANDARD</div>
+              <div class="rf-display" style="font-size: 22px; color: #FFFFFF; margin-top: 4px;">Full Tune &amp; Battery Test</div>
+              <div style="margin-top: 6px;"><span class="rf-display" style="font-size: 34px; color: #FACC15;">250</span> <strong style="color: #FFFFFF;">AED</strong></div>
+              <p style="margin: 8px 0 0; font-size: 13px; color: #CBD5E1;">Basic check + battery voltage/charger diagnostics &amp; suspension lube.</p>
+            </div>
+            <button type="button" onclick="bookPreset('E-Bike / Scooter', 'E-Bike / Scooter Standard (250 AED)', 250)" class="rf-btn rf-btn-racing" style="width: 100%; padding: 11px; border-radius: 12px; font-size: 13px;">Select Standard — 250 AED</button>
+          </div>
+
+          <div class="rf-card" style="padding: 20px; display: flex; flex-direction: column; justify-content: space-between; gap: 14px;">
+            <div>
+              <div style="font-size: 11px; font-weight: 800; color: #FACC15;">E-BIKE / SCOOTER PREMIUM</div>
+              <div class="rf-display" style="font-size: 22px; color: #FFFFFF; margin-top: 4px;">Complete Overhaul</div>
+              <div style="margin-top: 6px;"><span class="rf-display" style="font-size: 34px; color: #FFFFFF;">325</span> <strong style="color: #FACC15;">AED</strong></div>
+              <p style="margin: 8px 0 0; font-size: 13px; color: #CBD5E1;">Standard service + hydraulic brake bleed, wiring check &amp; Sur-Ron tune option.</p>
+            </div>
+            <button type="button" onclick="bookPreset('E-Bike / Scooter', 'E-Bike / Scooter Premium (325 AED)', 325)" class="rf-btn rf-btn-dark" style="width: 100%; padding: 11px; border-radius: 12px; font-size: 13px;">Select Premium — 325 AED</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- D. GOLF CARTS -->
+      <div id="panel-golfcarts" class="package-panel" style="display: flex; flex-direction: column; gap: 20px;">
+        <div style="border-bottom: 1px solid #283140; padding-bottom: 12px;">
+          <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #34D399;">Category 04 • Villa &amp; Community Golf Carts</div>
+          <h3 class="rf-display" style="font-size: 28px; color: #FFFFFF; margin-top: 2px;">Golf Cart Maintenance Packages</h3>
+        </div>
+        <div class="rf-grid-3">
+          <div class="rf-card" style="padding: 20px; display: flex; flex-direction: column; justify-content: space-between; gap: 14px;">
+            <div>
+              <div style="font-size: 11px; font-weight: 800; color: #94A3B8;">GOLF CART BASIC</div>
+              <div class="rf-display" style="font-size: 22px; color: #FFFFFF; margin-top: 4px;">Battery &amp; Safety Check</div>
+              <div style="margin-top: 6px;"><span class="rf-display" style="font-size: 34px; color: #FFFFFF;">299</span> <strong style="color: #34D399;">AED</strong></div>
+              <p style="margin: 8px 0 0; font-size: 13px; color: #CBD5E1;">Battery voltage check, terminal clean, brakes, tyres &amp; lights check.</p>
+            </div>
+            <button type="button" onclick="bookPreset('Golf Cart', 'Golf Cart Basic Service (299 AED)', 299)" class="rf-btn rf-btn-dark" style="width: 100%; padding: 11px; border-radius: 12px; font-size: 13px;">Select Basic — 299 AED</button>
+          </div>
+
+          <div class="rf-card" style="padding: 20px; display: flex; flex-direction: column; justify-content: space-between; gap: 14px; border: 2px solid #10B981;">
+            <div>
+              <div style="font-size: 11px; font-weight: 800; color: #34D399;">GOLF CART STANDARD</div>
+              <div class="rf-display" style="font-size: 22px; color: #FFFFFF; margin-top: 4px;">Full Chassis &amp; Load Service</div>
+              <div style="margin-top: 6px;"><span class="rf-display" style="font-size: 34px; color: #34D399;">449</span> <strong style="color: #FFFFFF;">AED</strong></div>
+              <p style="margin: 8px 0 0; font-size: 13px; color: #CBD5E1;">Basic check + battery load test, distilled water top-up &amp; suspension grease.</p>
+            </div>
+            <button type="button" onclick="bookPreset('Golf Cart', 'Golf Cart Standard Service (449 AED)', 449)" class="rf-btn rf-btn-emerald" style="width: 100%; padding: 11px; border-radius: 12px; font-size: 13px;">Select Standard — 449 AED</button>
+          </div>
+
+          <div class="rf-card" style="padding: 20px; display: flex; flex-direction: column; justify-content: space-between; gap: 14px;">
+            <div>
+              <div style="font-size: 11px; font-weight: 800; color: #34D399;">GOLF CART PREMIUM</div>
+              <div class="rf-display" style="font-size: 22px; color: #FFFFFF; margin-top: 4px;">Major Service + Detail</div>
+              <div style="margin-top: 6px;"><span class="rf-display" style="font-size: 34px; color: #FFFFFF;">649</span> <strong style="color: #34D399;">AED</strong></div>
+              <p style="margin: 8px 0 0; font-size: 13px; color: #CBD5E1;">Standard service + differential/controller check &amp; full wash/detail.</p>
+            </div>
+            <button type="button" onclick="bookPreset('Golf Cart', 'Golf Cart Premium Service (649 AED)', 649)" class="rf-btn rf-btn-dark" style="width: 100%; padding: 11px; border-radius: 12px; font-size: 13px;">Select Premium — 649 AED</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 8. PROBLEM SOLVER ==================== -->
+  <section id="problem-solver" class="rf-section rf-bg-dark">
+    <div class="rf-container">
+      <div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 24px;">
+        <div>
+          <div style="font-size: 12px; font-weight: 800; text-transform: uppercase; color: #E11D48;">Interactive Diagnostic Finder</div>
+          <h2 class="rf-display" style="font-size: clamp(30px, 5vw, 46px); color: #FFFFFF; margin-top: 4px;">
+            Sound <span style="color: #FACC15;">Familiar?</span>
+          </h2>
+        </div>
+        <input type="text" id="problem-search" oninput="filterProblems()" placeholder="🔍 Search oil, brakes, chain, flat tyre..." class="rf-input" style="max-width: 320px;" />
+      </div>
+
+      <div id="problems-grid" class="rf-grid-4"></div>
+    </div>
+  </section>
+
+  <!-- ==================== 9. HOW IT WORKS ==================== -->
+  <section id="how-it-works" class="rf-section rf-bg-darker">
+    <div class="rf-container">
+      <div style="text-align: center; margin-bottom: 32px;">
+        <div style="font-size: 12px; font-weight: 800; text-transform: uppercase; color: #FACC15;">Zero Friction Process</div>
+        <h2 class="rf-display" style="font-size: clamp(30px, 5vw, 46px); color: #FFFFFF; margin-top: 4px;">
+          How <span style="color: #E11D48;">RideFix</span> Works
+        </h2>
+      </div>
+
+      <div class="rf-grid-4">
+        <div class="rf-card" style="padding: 20px;">
+          <div class="rf-display" style="font-size: 32px; color: #E11D48;">01</div>
+          <div class="rf-display" style="font-size: 20px; color: #FFFFFF; margin-top: 6px;">Choose Your Ride</div>
+          <p style="margin: 6px 0 0; font-size: 13px; color: #94A3B8;">Pick Motorcycle, Bicycle, E-Bike/Scooter, or Golf Cart and tell us the model or issue.</p>
+        </div>
+        <div class="rf-card" style="padding: 20px;">
+          <div class="rf-display" style="font-size: 32px; color: #FACC15;">02</div>
+          <div class="rf-display" style="font-size: 20px; color: #FFFFFF; margin-top: 6px;">Pick Your Package</div>
+          <p style="margin: 6px 0 0; font-size: 13px; color: #94A3B8;">See your transparent AED rate upfront with 0 AED required online.</p>
+        </div>
+        <div class="rf-card" style="padding: 20px;">
+          <div class="rf-display" style="font-size: 32px; color: #34D399;">03</div>
+          <div class="rf-display" style="font-size: 20px; color: #FFFFFF; margin-top: 6px;">Send via WhatsApp/Email</div>
+          <p style="margin: 6px 0 0; font-size: 13px; color: #94A3B8;">Send directly to <strong style="color: #FFFFFF;">+971 50 891 6313</strong> or <strong style="color: #FACC15;">Lilian.ordinario@gmail.com</strong>.</p>
+        </div>
+        <div class="rf-card" style="padding: 20px;">
+          <div class="rf-display" style="font-size: 32px; color: #38BDF8;">04</div>
+          <div class="rf-display" style="font-size: 20px; color: #FFFFFF; margin-top: 6px;">We Fix On-Site</div>
+          <p style="margin: 6px 0 0; font-size: 13px; color: #94A3B8;">Our mobile crew arrives at your Dubai location and you pay only after completion.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 10. 60-SECOND BOOKING & LIVE AED CALCULATOR ==================== -->
+  <section id="booking" class="rf-section rf-bg-dark rf-hero-ambient">
+    <div class="rf-container">
+      <div style="text-align: center; max-width: 720px; margin: 0 auto 32px;">
+        <div style="font-size: 12px; font-weight: 800; text-transform: uppercase; color: #E11D48;">60-Second Instant Booking</div>
+        <h2 class="rf-display" style="font-size: clamp(30px, 5vw, 48px); color: #FFFFFF; margin-top: 4px;">
+          Build Your Service &amp; <span style="color: #FACC15;">Live AED Quote</span>
+        </h2>
+      </div>
+
+      <div class="rf-booking-grid" style="display: grid; gap: 24px;">
+        <!-- Left Form -->
+        <div class="rf-card" style="padding: 20px; display: flex; flex-direction: column; gap: 22px;">
+          <!-- Step 1 -->
+          <div>
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 10px; flex-wrap: wrap;">
+              <span class="rf-display" style="font-size: 18px; color: #FFFFFF;"><span style="color: #E11D48;">Step 1.</span> Vehicle &amp; Qty</span>
+              <div style="display: inline-flex; align-items: center; gap: 8px; background: #1A2029; border: 1px solid #283140; padding: 4px 10px; border-radius: 10px;">
+                <span style="font-size: 12px; color: #94A3B8;">Qty:</span>
+                <button type="button" onclick="changeQty(-1)" style="width: 24px; height: 24px; border-radius: 6px; background: #14181F; color: #FFF; border: 1px solid #283140; cursor: pointer; font-weight: 800;">-</button>
+                <span id="booking-qty" style="font-size: 14px; font-weight: 800; color: #FFF;">1</span>
+                <button type="button" onclick="changeQty(1)" style="width: 24px; height: 24px; border-radius: 6px; background: #14181F; color: #FFF; border: 1px solid #283140; cursor: pointer; font-weight: 800;">+</button>
+              </div>
+            </div>
+
+            <div class="rf-grid-4">
+              <button type="button" onclick="setBookingVehicle('Motorcycle')" id="vbtn-Motorcycle" class="v-btn rf-card-inner" style="padding: 12px; text-align: left; cursor: pointer; border: 2px solid #E11D48; background: rgba(225,29,72,0.14);">
+                <div style="font-size: 18px;">🏍️</div>
+                <div style="font-size: 12px; font-weight: 800; color: #FFFFFF; margin-top: 4px;">Motorcycle</div>
+                <div style="font-size: 11px; color: #CBD5E1;">From 199 AED</div>
+              </button>
+              <button type="button" onclick="setBookingVehicle('Bicycle')" id="vbtn-Bicycle" class="v-btn rf-card-inner" style="padding: 12px; text-align: left; cursor: pointer;">
+                <div style="font-size: 18px;">🚲</div>
+                <div style="font-size: 12px; font-weight: 800; color: #FFFFFF; margin-top: 4px;">Bicycle</div>
+                <div style="font-size: 11px; color: #94A3B8;">From 150 AED</div>
+              </button>
+              <button type="button" onclick="setBookingVehicle('E-Bike / Scooter')" id="vbtn-EBike" class="v-btn rf-card-inner" style="padding: 12px; text-align: left; cursor: pointer;">
+                <div style="font-size: 18px;">⚡</div>
+                <div style="font-size: 12px; font-weight: 800; color: #FFFFFF; margin-top: 4px;">E-Bike/Scooter</div>
+                <div style="font-size: 11px; color: #94A3B8;">From 175 AED</div>
+              </button>
+              <button type="button" onclick="setBookingVehicle('Golf Cart')" id="vbtn-GolfCart" class="v-btn rf-card-inner" style="padding: 12px; text-align: left; cursor: pointer;">
+                <div style="font-size: 18px;">⛳</div>
+                <div style="font-size: 12px; font-weight: 800; color: #FFFFFF; margin-top: 4px;">Golf Cart</div>
+                <div style="font-size: 11px; color: #94A3B8;">From 299 AED</div>
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div>
+            <div class="rf-display" style="font-size: 18px; color: #FFFFFF; margin-bottom: 10px;"><span style="color: #E11D48;">Step 2.</span> Choose Service Package</div>
+            <div id="dynamic-packages-list" style="display: flex; flex-direction: column; gap: 8px;"></div>
+          </div>
+
+          <!-- Step 3 -->
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div class="rf-display" style="font-size: 18px; color: #FFFFFF;"><span style="color: #E11D48;">Step 3.</span> Add-Ons &amp; Ride Details</div>
+            <div class="rf-grid-2">
+              <label class="rf-card-inner" style="padding: 12px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; gap: 8px;">
+                <span style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; color: #FFF;">
+                  <input type="checkbox" id="addon-wheel" onchange="updateCalculator()" />
+                  <span>Wheel / Tube Change</span>
+                </span>
+                <strong style="font-size: 12px; color: #FACC15;">+100 AED</strong>
+              </label>
+
+              <label class="rf-card-inner" style="padding: 12px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; gap: 8px;">
+                <span style="display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; color: #FFF;">
+                  <input type="checkbox" id="addon-brake" onchange="updateCalculator()" />
+                  <span>Extra Brake Servicing</span>
+                </span>
+                <strong style="font-size: 12px; color: #FACC15;">+100 AED</strong>
+              </label>
+            </div>
+
+            <div class="rf-grid-2">
+              <input type="text" id="input-model" oninput="updateCalculator()" placeholder="Make / Model (e.g. Honda CBR650R)" class="rf-input" />
+              <input type="text" id="input-notes" oninput="updateCalculator()" placeholder="Notes / Oil or Issue (Optional)" class="rf-input" />
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div class="rf-display" style="font-size: 18px; color: #FFFFFF;"><span style="color: #E11D48;">Step 4.</span> Dubai Location &amp; Contact</div>
+            <div class="rf-grid-2">
+              <input type="text" id="input-name" oninput="updateCalculator()" placeholder="Your Name *" class="rf-input" />
+              <input type="tel" id="input-cust-phone" oninput="updateCalculator()" placeholder="Your Mobile / WhatsApp *" class="rf-input" />
+            </div>
+
+            <div class="rf-grid-3">
+              <select id="input-area" onchange="updateCalculator()" class="rf-select">
+                <option value="Dubai Marina">Dubai Marina</option>
+                <option value="JBR / Bluewaters">JBR / Bluewaters</option>
+                <option value="JLT">JLT</option>
+                <option value="Palm Jumeirah">Palm Jumeirah</option>
+                <option value="Downtown Dubai">Downtown Dubai</option>
+                <option value="Business Bay">Business Bay</option>
+                <option value="JVC / JVT">JVC / JVT</option>
+                <option value="Al Barsha / Tecom">Al Barsha / Tecom</option>
+                <option value="Dubai Hills Estate">Dubai Hills Estate</option>
+                <option value="Arabian Ranches">Arabian Ranches</option>
+                <option value="Motor City / Sports City">Motor City / Sports City</option>
+                <option value="Deira / Bur Dubai">Deira / Bur Dubai</option>
+                <option value="Mirdif / Al Warqa">Mirdif / Al Warqa</option>
+                <option value="Dubai Silicon Oasis">Dubai Silicon Oasis</option>
+              </select>
+              <input type="date" id="input-date" onchange="updateCalculator()" class="rf-input" />
+              <select id="input-time" onchange="updateCalculator()" class="rf-select">
+                <option value="Morning (9 AM – 12 PM)">Morning (9 AM – 12 PM)</option>
+                <option value="Afternoon (12 PM – 4 PM)">Afternoon (12 PM – 4 PM)</option>
+                <option value="Evening (4 PM – 8 PM)">Evening (4 PM – 8 PM)</option>
+                <option value="ASAP / Urgent Dispatch">ASAP / Urgent Dispatch</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Summary Card -->
+        <div class="rf-card" style="overflow: hidden; border: 2px solid rgba(225,29,72,0.7);">
+          <div style="background: linear-gradient(90deg, #E11D48, #9F1239); padding: 16px 20px; display: flex; align-items: center; justify-content: space-between;">
+            <div>
+              <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #FFE4E6;">Live Estimate</div>
+              <div class="rf-display" style="font-size: 22px; color: #FFFFFF;">Your RideFix Booking</div>
+            </div>
+            <span style="background: rgba(0,0,0,0.35); color: #FFFFFF; font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 9999px;">0 AED Now</span>
+          </div>
+
+          <div style="padding: 20px; display: flex; flex-direction: column; gap: 14px;">
+            <div style="display: flex; flex-direction: column; gap: 8px; font-size: 13px; border-bottom: 1px solid #283140; padding-bottom: 14px;">
+              <div style="display: flex; justify-content: space-between; gap: 8px;">
+                <span style="color: #94A3B8;">Vehicle &amp; Qty:</span>
+                <strong id="sum-vehicle" style="color: #FFFFFF;">1x Motorcycle</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; gap: 8px;">
+                <span style="color: #94A3B8;">Package:</span>
+                <strong id="sum-package" style="color: #FACC15; text-align: right;">Standard Service — Oil &amp; Filter (399 AED)</strong>
+              </div>
+              <div id="sum-addons-row" class="rf-hidden" style="display: flex; justify-content: space-between; gap: 8px;">
+                <span style="color: #94A3B8;">Add-Ons:</span>
+                <span id="sum-addons" style="color: #E2E8F0; text-align: right;">None</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; gap: 8px;">
+                <span style="color: #94A3B8;">Dubai Area:</span>
+                <strong id="sum-area" style="color: #FFFFFF;">Dubai Marina</strong>
+              </div>
+              <div style="display: flex; justify-content: space-between; gap: 8px;">
+                <span style="color: #94A3B8;">Schedule:</span>
+                <span id="sum-schedule" style="color: #CBD5E1; text-align: right;">Morning (9 AM – 12 PM)</span>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: baseline; justify-content: space-between;">
+              <div>
+                <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #94A3B8;">Estimated Total</div>
+                <div style="font-size: 11px; color: #34D399;">Pay after completion (Cash / Bank Transfer)</div>
+              </div>
+              <div>
+                <span id="sum-total" class="rf-display" style="font-size: 40px; color: #FFFFFF;">399</span>
+                <span class="rf-display" style="font-size: 18px; color: #FACC15;">AED</span>
+              </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 10px; padding-top: 4px;">
+              <button type="button" onclick="sendBookingWhatsApp()" class="rf-btn rf-btn-emerald" style="width: 100%; padding: 14px; border-radius: 14px; font-size: 14px;">
+                <span>💬 Send Booking via WhatsApp</span>
+              </button>
+              <button type="button" onclick="copyBookingSummary()" class="rf-btn rf-btn-dark" style="width: 100%; padding: 11px; border-radius: 14px; font-size: 12px;">
+                <span>📋 Copy Booking Summary</span>
+              </button>
+              <button type="button" onclick="resetBookingForm()" class="rf-btn rf-btn-dark" style="width: 100%; padding: 11px; border-radius: 14px; font-size: 12px; color: #CBD5E1;">
+                <span>↺ Clear / Reset Form</span>
+              </button>
+              <button type="button" onclick="sendBookingEmail()" class="rf-btn rf-btn-gold" style="width: 100%; padding: 13px; border-radius: 14px; font-size: 13px;">
+                <span>✉ Send Booking via Email</span>
+              </button>
+
+            </div>
+
+            <div class="rf-card-inner" style="padding: 10px; text-align: center; font-size: 12px; color: #CBD5E1;">
+              Dispatches to <strong id="summary-phone-display" style="color: #FFFFFF;">+971 50 891 6313</strong> &amp; <strong style="color: #FACC15;">Lilian.ordinario@gmail.com</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 11. REVIEWS & CARE GUIDES ==================== -->
+  <section id="guides" class="rf-section rf-bg-darker">
+    <div class="rf-container" style="display: flex; flex-direction: column; gap: 36px;">
+      <div>
+        <div style="font-size: 12px; font-weight: 800; text-transform: uppercase; color: #FACC15;">Verified Dubai Feedback</div>
+        <h2 class="rf-display" style="font-size: clamp(30px, 5vw, 46px); color: #FFFFFF; margin-top: 4px;">
+          Rated <span style="color: #FACC15;">4.9 / 5</span> By Dubai Riders
+        </h2>
+        <div class="rf-grid-3" style="margin-top: 20px;">
+          <div class="rf-card" style="padding: 18px;">
+            <div style="color: #FACC15; font-size: 13px;">★★★★★ • Dubai Marina</div>
+            <p style="margin: 8px 0; font-size: 13px; color: #E2E8F0;">"Booked the 399 AED Standard Oil &amp; Filter service for my CBR650R in my Marina parking. Clean mat, fast work, and zero hassle."</p>
+            <div style="font-size: 12px; font-weight: 800; color: #FFFFFF;">— Tariq M. • Honda CBR650R</div>
+          </div>
+          <div class="rf-card" style="padding: 18px;">
+            <div style="color: #FACC15; font-size: 13px;">★★★★★ • Arabian Ranches</div>
+            <p style="margin: 8px 0; font-size: 13px; color: #E2E8F0;">"Serviced our golf cart (449 AED) and mountain bike (150 AED) at our villa. Paid cash only after testing both."</p>
+            <div style="font-size: 12px; font-weight: 800; color: #FFFFFF;">— Sarah K. • Golf Cart &amp; MTB</div>
+          </div>
+          <div class="rf-card" style="padding: 18px;">
+            <div style="color: #FACC15; font-size: 13px;">★★★★★ • Business Bay</div>
+            <p style="margin: 8px 0; font-size: 13px; color: #E2E8F0;">"Salamat RideFix! Came to my office parking and fixed my MT-07 chain and battery before my weekend ride."</p>
+            <div style="font-size: 12px; font-weight: 800; color: #FFFFFF;">— Marco D. • Yamaha MT-07</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="rf-display" style="font-size: 28px; color: #FFFFFF; margin-bottom: 16px;">Dubai Rider &amp; Cart Care Guides</h3>
+        <div class="rf-grid-3">
+          <details class="rf-card" style="padding: 18px;">
+            <summary style="cursor: pointer; font-weight: 800; color: #FFFFFF; font-size: 15px;">Dubai Hot-Weather Engine Oil Care</summary>
+            <p style="margin: 10px 0 0; font-size: 13px; color: #CBD5E1;">High UAE heat thins oil faster in traffic. Change oil and filter every 3,000–5,000 km or 6 months.</p>
+          </details>
+          <details class="rf-card" style="padding: 18px;">
+            <summary style="cursor: pointer; font-weight: 800; color: #FFFFFF; font-size: 15px;">Sand &amp; Dust Chain Maintenance</summary>
+            <p style="margin: 10px 0 0; font-size: 13px; color: #CBD5E1;">Desert dust sticks to heavy grease. Clean and lube your chain every 500–700 km to extend sprocket life.</p>
+          </details>
+          <details class="rf-card" style="padding: 18px;">
+            <summary style="cursor: pointer; font-weight: 800; color: #FFFFFF; font-size: 15px;">Golf Cart Battery Bank Lifespan</summary>
+            <p style="margin: 10px 0 0; font-size: 13px; color: #CBD5E1;">Check distilled water monthly after charging and keep terminals clean in villa communities.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="rf-card" style="padding: 20px; border-color: rgba(52, 211, 153, 0.45);">
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 12px;">
+          <div>
+            <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; color: #34D399;">Release &amp; Hosting Checklist</div>
+            <h3 class="rf-display" style="font-size: 24px; color: #FFFFFF; margin-top: 2px;">GitHub &amp; Local Folder Readiness</h3>
+          </div>
+          <span class="rf-v6-pill">v11 LIVE READY</span>
+        </div>
+        <div class="rf-grid-3" style="gap: 12px; font-size: 12px; color: #CBD5E1;">
+          <div class="rf-card-inner" style="padding: 12px;">
+            <strong style="color: #FFFFFF;">1. Root Folder Files</strong>
+            <p style="margin: 4px 0 0; color: #94A3B8;">Keep <code>index.html</code>, <code>video_1.mp4</code>, and <code>Motorcycle Repair and Oil Change Ad_2.png</code> in the same root directory.</p>
+          </div>
+          <div class="rf-card-inner" style="padding: 12px;">
+            <strong style="color: #FFFFFF;">2. Firefox Verification</strong>
+            <p style="margin: 4px 0 0; color: #94A3B8;">Test calculator totals, WhatsApp/Email dispatch links, and responsive mobile drawer layout in Firefox.</p>
+          </div>
+          <div class="rf-card-inner" style="padding: 12px;">
+            <strong style="color: #FFFFFF;">3. Git Push &amp; Pages</strong>
+            <p style="margin: 4px 0 0; color: #94A3B8;">Commit changes to your Git repository and push to GitHub to publish your updated mobile workshop site.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== 12. FAQ ==================== -->
+  <section id="faq" class="rf-section rf-bg-dark">
+    <div class="rf-container" style="max-width: 860px;">
+      <div style="text-align: center; margin-bottom: 24px;">
+        <div style="font-size: 12px; font-weight: 800; text-transform: uppercase; color: #E11D48;">Everything You Need To Know</div>
+        <h2 class="rf-display" style="font-size: clamp(30px, 5vw, 46px); color: #FFFFFF; margin-top: 4px;">
+          Frequently Asked <span style="color: #FACC15;">Questions</span>
+        </h2>
+      </div>
+      <div id="faq-container" style="display: flex; flex-direction: column; gap: 10px;"></div>
+    </div>
+  </section>
+
+  <!-- ==================== 13. FOOTER ==================== -->
+  <footer class="rf-bg-top" style="padding-top: 44px; padding-bottom: 44px; color: #94A3B8; font-size: 13px;">
+    <div class="rf-container">
+      <div class="rf-grid-4" style="padding-bottom: 28px; border-bottom: 1px solid #283140;">
+        <div>
+          <div class="rf-display" style="font-size: 22px; color: #FFFFFF;">RIDE<span style="color: #E11D48;">FIX</span> DUBAI</div>
+          <p style="margin: 8px 0; font-size: 12px;">We Fix. You Ride. — Ride Safe. Ride Happy. Mobile workshop across all of Dubai.</p>
+          <div style="font-weight: 700; color: #FFFFFF;">📞 <a id="footer-phone-link" href="tel:+971508916313"><span id="footer-phone-text">+971 50 891 6313</span></a></div>
+          <div style="font-weight: 700; color: #FACC15; margin-top: 4px;">✉ <a href="mailto:Lilian.ordinario@gmail.com">Lilian.ordinario@gmail.com</a></div>
+        </div>
+
+        <div>
+          <div class="rf-display" style="font-size: 16px; color: #FFFFFF; margin-bottom: 8px;">Service Packages</div>
+          <div style="display: flex; flex-direction: column; gap: 5px; font-size: 12px;">
+            <span>• Motorcycle Essential (199 AED)</span>
+            <span>• Motorcycle Oil &amp; Filter (399 AED)</span>
+            <span>• Motorcycle Premium + Wash (699 AED)</span>
+            <span>• Bicycles From 150 AED • E-Bikes From 175 AED</span>
+            <span>• Golf Carts From 299 AED</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="rf-display" style="font-size: 16px; color: #FFFFFF; margin-bottom: 8px;">Dubai Coverage</div>
+          <div style="display: flex; flex-direction: column; gap: 5px; font-size: 12px;">
+            <span>• Marina, JBR, JLT, Palm Jumeirah</span>
+            <span>• Downtown, Business Bay, Al Barsha</span>
+            <span>• JVC, JVT, Motor City, Sports City</span>
+            <span>• Dubai Hills, Arabian Ranches, Mirdif, Deira</span>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div class="rf-display" style="font-size: 16px; color: #FFFFFF;">Instant Dispatch</div>
+          <a id="footer-wa-btn" href="https://wa.me/971508916313?text=Hi%20RideFix%20Dubai!" target="_blank" rel="noopener" class="rf-btn rf-btn-emerald" style="padding: 10px 12px; border-radius: 12px; font-size: 12px;">
+            💬 Chat on WhatsApp
+          </a>
+          <a href="mailto:Lilian.ordinario@gmail.com?subject=RideFix%20Dubai%20Service%20Inquiry" class="rf-btn rf-btn-dark" style="padding: 10px 12px; border-radius: 12px; font-size: 12px; color: #FACC15;">
+            ✉ Email Lilian.ordinario@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <div style="padding-top: 18px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px; font-size: 12px;">
+        <span>© 2026 RideFix Mobile Workshop Dubai, UAE. All Rights Reserved.</span>
+        <strong style="color: #E2E8F0;">Page Created By: IAN LHOI IBE/Web Solution for Hire • <a href="mailto:kian2118@gmail.com" style="color: #FACC15;">kian2118@gmail.com</a></strong>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== 14. STICKY BOTTOM MOBILE BAR ==================== -->
+  <div class="rf-mobile-bar rf-glass-bar" style="position: fixed; bottom: 0; left: 0; right: 0; z-index: 50; border-top: 1px solid #283140; padding: 8px 10px;">
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; max-width: 480px; margin: 0 auto;">
+      <a id="mobile-bar-call" href="tel:+971508916313" class="rf-btn rf-btn-dark" style="padding: 10px 6px; border-radius: 12px; font-size: 12px;">📞 Call</a>
+      <a id="mobile-bar-wa" href="https://wa.me/971508916313?text=Hi%20RideFix%20Dubai!%20I%20need%20a%20service." target="_blank" rel="noopener" class="rf-btn rf-btn-emerald" style="padding: 10px 6px; border-radius: 12px; font-size: 12px;">💬 WhatsApp</a>
+      <a href="#booking" class="rf-btn rf-btn-racing" style="padding: 10px 6px; border-radius: 12px; font-size: 12px;">📅 Book Now</a>
+    </div>
+  </div>
+
+  <!-- EDIT PHONE MODAL -->
+  <div id="phone-modal" class="rf-hidden" style="position: fixed; inset: 0; z-index: 60; background: rgba(0,0,0,0.82); display: flex; align-items: center; justify-content: center; padding: 16px;">
+    <div class="rf-card" style="max-width: 380px; width: 100%; padding: 20px; display: flex; flex-direction: column; gap: 12px;">
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <span class="rf-display" style="font-size: 18px; color: #FFFFFF;">Update Dispatch Number</span>
+        <button type="button" onclick="closePhoneModal()" style="background: none; border: none; color: #94A3B8; font-size: 18px; cursor: pointer;">✕</button>
+      </div>
+      <p style="margin: 0; font-size: 12px; color: #94A3B8;">Updates Call &amp; WhatsApp links across the page.</p>
+      <input type="tel" id="modal-phone-input" value="+971 50 891 6313" class="rf-input" />
+      <div style="display: flex; gap: 8px;">
+        <button type="button" onclick="saveNewPhone()" class="rf-btn rf-btn-racing" style="flex: 1; padding: 10px; border-radius: 10px; font-size: 12px;">Save Number</button>
+        <button type="button" onclick="closePhoneModal()" class="rf-btn rf-btn-dark" style="padding: 10px 14px; border-radius: 10px; font-size: 12px;">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div id="toast-box" class="rf-hidden" style="position: fixed; top: 76px; right: 14px; z-index: 70; background: #059669; color: #FFFFFF; padding: 10px 14px; border-radius: 12px; font-size: 12px; font-weight: 800; box-shadow: 0 10px 25px rgba(0,0,0,0.4);">
+    <span id="toast-msg">Updated!</span>
+  </div>
+
+  <script>
+    let dispatchPhone = '+971 50 891 6313';
+    const dispatchEmail = 'Lilian.ordinario@gmail.com';
+
+    const packagesByVehicle = {
+      'Motorcycle': [
+        { name: 'Standard Service — Oil & Filter (399 AED)', price: 399, desc: 'Up to 4L semi-synthetic oil, OEM filter, chain care & full inspection (Most Booked)' },
+        { name: 'Essential Service (199 AED)', price: 199, desc: 'Drive chain degrease/lube/tension, brake check, tyre PSI & safety torque check' },
+        { name: 'Premium Service + Full Wash & Report (699 AED)', price: 699, desc: 'Standard Oil & Tune + full wash, charging system test & digital photo report' },
+        { name: 'Standalone Repair / Custom Quote (0 AED Online)', price: 0, desc: 'Brake pads, tyres, battery, chain & sprocket kit, or electrical diagnostics' }
+      ],
+      'Bicycle': [
+        { name: 'Bicycle Standard Service (200 AED)', price: 200, desc: 'Gear indexing, brake tune, full drivetrain sand degrease & minor wheel true' },
+        { name: 'Bicycle Basic Service (150 AED)', price: 150, desc: 'Front/rear gear & brake adjustment, chain lube, tyre PSI & bolt check' },
+        { name: 'Bicycle Premium Overhaul (250 AED)', price: 250, desc: 'Standard service + hydraulic brake bleed, bearing service & full wash' }
+      ],
+      'E-Bike / Scooter': [
+        { name: 'E-Bike / Scooter Standard (250 AED)', price: 250, desc: 'Brake & folding stem safety tune + battery voltage & charger diagnostics' },
+        { name: 'E-Bike / Scooter Basic (175 AED)', price: 175, desc: 'Brake calibration, folding latch torque check, tyre PSI & display check' },
+        { name: 'E-Bike / Scooter Premium (325 AED)', price: 325, desc: 'Full overhaul, hydraulic bleed, waterproofing & Sur-Ron custom tune option' }
+      ],
+      'Golf Cart': [
+        { name: 'Golf Cart Standard Service (449 AED)', price: 449, desc: 'Battery bank load test, distilled water top-up, suspension grease & brake clean' },
+        { name: 'Golf Cart Basic Service (299 AED)', price: 299, desc: 'Battery voltage check, terminal clean, brake pedal adjustment & safety check' },
+        { name: 'Golf Cart Premium Service + Detail (649 AED)', price: 649, desc: 'Full service + differential/controller check & full canopy/seat wash' }
+      ]
+    };
+
+    const commonProblems = [
+      { symptom: 'Motorcycle due for oil & filter change', badge: '399 AED', vehicle: 'Motorcycle', pkg: 'Standard Service — Oil & Filter (399 AED)', price: 399, addon: null },
+      { symptom: 'Loose, dry, or noisy motorcycle chain', badge: '199 AED', vehicle: 'Motorcycle', pkg: 'Essential Service (199 AED)', price: 199, addon: null },
+      { symptom: 'Squeaking or weak brakes on bike/moto', badge: '100 AED', vehicle: 'Motorcycle', pkg: 'Essential Service (199 AED)', price: 199, addon: 'brake' },
+      { symptom: 'Pre-purchase used motorcycle inspection', badge: '699 AED', vehicle: 'Motorcycle', pkg: 'Premium Service + Full Wash & Report (699 AED)', price: 699, addon: null },
+      { symptom: 'Bicycle gears skipping or clicking', badge: '150 AED', vehicle: 'Bicycle', pkg: 'Bicycle Basic Service (150 AED)', price: 150, addon: null },
+      { symptom: 'Flat tyre or punctured scooter/bike tube', badge: '100 AED/wheel', vehicle: 'Bicycle', pkg: 'Bicycle Basic Service (150 AED)', price: 150, addon: 'wheel' },
+      { symptom: 'E-scooter stem wobble or error code', badge: '250 AED', vehicle: 'E-Bike / Scooter', pkg: 'E-Bike / Scooter Standard (250 AED)', price: 250, addon: null },
+      { symptom: 'Golf cart losing charge or sluggish uphill', badge: '449 AED', vehicle: 'Golf Cart', pkg: 'Golf Cart Standard Service (449 AED)', price: 449, addon: null }
+    ];
+
+    const faqs = [
+      { q: 'Which areas of Dubai does RideFix cover?', a: 'We cover all Dubai communities including Marina, JBR, JLT, Palm Jumeirah, Downtown, Business Bay, JVC, Al Barsha, Dubai Hills, Arabian Ranches, Motor City, Mirdif, Deira, and Silicon Oasis.' },
+      { q: 'Do I pay anything online when booking?', a: 'No! Booking takes 60 seconds and costs 0 AED upfront. Pay via Cash or Instant UAE Bank Transfer only after job completion.' },
+      { q: 'What is included in the 399 AED Motorcycle Standard Oil & Tune package?', a: 'Up to 4L semi-synthetic oil, new oil filter, chain clean/lube/tension, brake inspection, air filter cleaning, and multi-point safety check.' },
+      { q: 'Can you service my motorcycle in an apartment basement parking?', a: 'Yes! We bring low-profile stands, tools, and heavy-duty oil drip mats to keep your parking floor clean.' },
+      { q: 'What motorcycle brands do you work on?', a: 'Honda, Yamaha, Kawasaki, Suzuki, BMW, Ducati, KTM, Triumph, Royal Enfield, Harley-Davidson, CFMoto, and more.' },
+      { q: 'Do you repair e-scooters and Sur-Ron electric dirt bikes?', a: 'Yes—Xiaomi, Segway Ninebot, Dualtron, Kaabo, commuter e-bikes, and Sur-Ron models.' },
+      { q: 'How do Golf Cart services work in villa communities?', a: 'We come to your villa driveway across Dubai to test battery voltage/load, check brakes & steering, and grease suspension.' },
+      { q: 'Can I upload my own video or photo of my bike problem?', a: 'Yes! Use the Media Uploader on this page to preview your video/photo, or send it directly on WhatsApp.' }
+    ];
+
+    let bookingState = {
+      vehicle: 'Motorcycle',
+      qty: 1,
+      packageName: 'Standard Service — Oil & Filter (399 AED)',
+      packagePrice: 399
+    };
+
+    const scenes = [
+      { badge: 'Scene 1 / 4 • 00:00 – 00:06', title: 'Precision Oil Drain & Inspection', desc: 'RideFix technician drains used oil on the lift and inspects engine & seals.', progress: '25%' },
+      { badge: 'Scene 2 / 4 • 00:06 – 00:12', title: 'Fresh Oil Pour & Torque Check', desc: 'Filling fresh motorcycle oil and torquing key bolts to spec.', progress: '50%' },
+      { badge: 'Scene 3 / 4 • 00:12 – 00:18', title: 'Tada! Ready For Dubai Roads', desc: 'Engine purrs smoothly and safety systems are checked.', progress: '75%' },
+      { badge: 'Scene 4 / 4 • 00:18 – 00:24', title: 'Roll Out & Ride With Confidence', desc: 'Book your doorstep mobile service with RideFix Dubai today.', progress: '100%' }
+    ];
+    let currentScene = 0;
+    let storyPlaying = true;
+    let storyTimer = null;
+
+    function renderScene() {
+      const s = scenes[currentScene];
+      document.getElementById('story-badge').textContent = s.badge;
+      document.getElementById('story-title').textContent = s.title;
+      document.getElementById('story-desc').textContent = s.desc;
+      document.getElementById('story-progress').style.width = s.progress;
+    }
+
+    function stepStory(dir) {
+      currentScene = (currentScene + dir + scenes.length) % scenes.length;
+      renderScene();
+    }
+
+    function toggleStory() {
+      storyPlaying = !storyPlaying;
+      const btn = document.getElementById('story-play-btn');
+      if (storyPlaying) {
+        btn.textContent = '⏸ Playing';
+        startStoryLoop();
+      } else {
+        btn.textContent = '▶ Paused';
+        clearInterval(storyTimer);
+      }
+    }
+
+    function startStoryLoop() {
+      clearInterval(storyTimer);
+      storyTimer = setInterval(() => {
+        if (storyPlaying) stepStory(1);
+      }, 4500);
+    }
+
+    function setHeroMode(mode) {
+      const vid = document.getElementById('hero-video-player');
+      const photoCard = document.getElementById('hero-photo-card');
+      const btnVideo = document.getElementById('hero-mode-video');
+      const btnPhoto = document.getElementById('hero-mode-photo');
+
+      if (mode === 'photo') {
+        vid.pause();
+        vid.classList.add('rf-hidden');
+        photoCard.classList.remove('rf-hidden');
+        btnPhoto.className = 'rf-btn rf-btn-racing';
+        btnVideo.className = 'rf-btn rf-btn-dark';
+      } else {
+        photoCard.classList.add('rf-hidden');
+        vid.classList.remove('rf-hidden');
+        btnVideo.className = 'rf-btn rf-btn-racing';
+        btnPhoto.className = 'rf-btn rf-btn-dark';
+      }
+      btnVideo.style.padding = '5px 10px';
+      btnVideo.style.borderRadius = '8px';
+      btnVideo.style.fontSize = '11px';
+      btnPhoto.style.padding = '5px 10px';
+      btnPhoto.style.borderRadius = '8px';
+      btnPhoto.style.fontSize = '11px';
+    }
+
+    function selectCategoryTab(cat) {
+      document.querySelectorAll('.cat-tab').forEach(btn => {
+        btn.className = 'cat-tab rf-btn rf-btn-dark';
+        btn.style.padding = '10px 14px';
+        btn.style.borderRadius = '12px';
+        btn.style.fontSize = '12px';
+      });
+      const active = document.getElementById('tab-' + cat);
+      if (active) {
+        active.className = 'cat-tab rf-btn rf-btn-racing';
+        active.style.padding = '10px 14px';
+        active.style.borderRadius = '12px';
+        active.style.fontSize = '12px';
+      }
+
+      ['motorcycles', 'bicycles', 'ebikes', 'golfcarts'].forEach(p => {
+        const panel = document.getElementById('panel-' + p);
+        if (cat === 'all' || cat === p) {
+          panel.classList.remove('rf-hidden');
+        } else {
+          panel.classList.add('rf-hidden');
+        }
+      });
+    }
+
+    function renderProblems(filterText = '') {
+      const grid = document.getElementById('problems-grid');
+      const q = filterText.toLowerCase().trim();
+      const filtered = commonProblems.filter(item =>
+        item.symptom.toLowerCase().includes(q) ||
+        item.vehicle.toLowerCase().includes(q) ||
+        item.pkg.toLowerCase().includes(q)
+      );
+
+      grid.innerHTML = filtered.map(item =>
+        '<button type="button" onclick="applyProblem(' + commonProblems.indexOf(item) + ')" class="rf-card" style="padding:16px;text-align:left;cursor:pointer;display:flex;flex-direction:column;justify-content:space-between;gap:12px;">' +
+          '<div>' +
+            '<div style="display:flex;justify-content:space-between;align-items:center;gap:6px;margin-bottom:8px;">' +
+              '<span style="font-size:11px;font-weight:800;color:#94A3B8;">' + item.vehicle + '</span>' +
+              '<span style="font-size:11px;font-weight:800;background:rgba(245,158,11,0.16);color:#FACC15;padding:2px 8px;border-radius:9999px;">' + item.badge + '</span>' +
+            '</div>' +
+            '<div style="font-size:14px;font-weight:700;color:#FFFFFF;">"' + item.symptom + '"</div>' +
+          '</div>' +
+          '<div style="font-size:12px;font-weight:800;color:#E11D48;border-top:1px solid #283140;padding-top:10px;">Auto-Fill Booking →</div>' +
+        '</button>'
+      ).join('');
+    }
+
+    function filterProblems() {
+      renderProblems(document.getElementById('problem-search').value);
+    }
+
+    function applyProblem(index) {
+      const item = commonProblems[index];
+      document.getElementById('addon-wheel').checked = item.addon === 'wheel';
+      document.getElementById('addon-brake').checked = item.addon === 'brake';
+      bookPreset(item.vehicle, item.pkg, item.price);
+    }
+
+    function setBookingVehicle(vehicle, customPkgName = null, customPkgPrice = null) {
+      bookingState.vehicle = vehicle;
+
+      document.querySelectorAll('.v-btn').forEach(btn => {
+        btn.style.border = '1px solid #283140';
+        btn.style.background = '#1A2029';
+      });
+      const idMap = {
+        'Motorcycle': 'vbtn-Motorcycle',
+        'Bicycle': 'vbtn-Bicycle',
+        'E-Bike / Scooter': 'vbtn-EBike',
+        'Golf Cart': 'vbtn-GolfCart'
+      };
+      const activeEl = document.getElementById(idMap[vehicle]);
+      if (activeEl) {
+        activeEl.style.border = '2px solid #E11D48';
+        activeEl.style.background = 'rgba(225,29,72,0.14)';
+      }
+
+      const list = packagesByVehicle[vehicle] || [];
+      if (customPkgName !== null) {
+        bookingState.packageName = customPkgName;
+        bookingState.packagePrice = customPkgPrice;
+      } else if (list.length > 0) {
+        bookingState.packageName = list[0].name;
+        bookingState.packagePrice = list[0].price;
+      }
+
+      const container = document.getElementById('dynamic-packages-list');
+      container.innerHTML = '';
+      list.forEach(p => {
+        const selected = p.name === bookingState.packageName;
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.style.cssText = 'width:100%;text-align:left;padding:12px 14px;border-radius:14px;cursor:pointer;display:flex;justify-content:space-between;align-items:flex-start;gap:10px;background:#1A2029;border:' + (selected ? '2px solid #F59E0B' : '1px solid #283140') + ';';
+        btn.innerHTML =
+          '<div>' +
+            '<div style="font-size:13px;font-weight:800;color:#FFFFFF;">' + p.name + '</div>' +
+            '<div style="font-size:11px;color:#94A3B8;margin-top:2px;">' + p.desc + '</div>' +
+          '</div>' +
+          '<strong style="font-size:13px;color:' + (selected ? '#FACC15' : '#CBD5E1') + ';flex-shrink:0;">' + (p.price > 0 ? p.price + ' AED' : 'Quote') + '</strong>';
+        btn.addEventListener('click', function() {
+          selectBookingPackage(p.name, p.price);
+        });
+        container.appendChild(btn);
+      });
+
+      updateCalculator();
+    }
+
+    function selectBookingPackage(name, price) {
+      setBookingVehicle(bookingState.vehicle, name, price);
+    }
+
+    function bookPreset(vehicle, pkgName, pkgPrice) {
+      setBookingVehicle(vehicle, pkgName, pkgPrice);
+      document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+      showToast('Selected: ' + pkgName);
+    }
+
+    function changeQty(delta) {
+      bookingState.qty = Math.max(1, Math.min(10, bookingState.qty + delta));
+      document.getElementById('booking-qty').textContent = bookingState.qty;
+      updateCalculator();
+    }
+
+    function updateCalculator() {
+      const wheelAddon = document.getElementById('addon-wheel').checked;
+      const brakeAddon = document.getElementById('addon-brake').checked;
+      const area = document.getElementById('input-area').value;
+      const dateVal = document.getElementById('input-date').value;
+      const timeVal = document.getElementById('input-time').value;
+
+      const addonsPerUnit = (wheelAddon ? 100 : 0) + (brakeAddon ? 100 : 0);
+      const total = (bookingState.packagePrice + addonsPerUnit) * bookingState.qty;
+
+      document.getElementById('sum-vehicle').textContent = bookingState.qty + 'x ' + bookingState.vehicle;
+      document.getElementById('sum-package').textContent = bookingState.packageName;
+      document.getElementById('sum-area').textContent = area;
+      document.getElementById('sum-schedule').textContent = dateVal ? (dateVal + ' • ' + timeVal) : timeVal;
+
+      const labels = [];
+      if (wheelAddon) labels.push('Wheel Change (+100 AED)');
+      if (brakeAddon) labels.push('Brake Service (+100 AED)');
+
+      const row = document.getElementById('sum-addons-row');
+      if (labels.length > 0) {
+        row.classList.remove('rf-hidden');
+        document.getElementById('sum-addons').textContent = labels.join(', ');
+      } else {
+        row.classList.add('rf-hidden');
+      }
+
+      document.getElementById('sum-total').textContent = total > 0 ? total : 'Custom Quote';
+    }
+
+    function buildBookingText() {
+      const name = document.getElementById('input-name').value.trim() || 'Rider';
+      const custPhone = document.getElementById('input-cust-phone').value.trim() || 'Not provided';
+      const model = document.getElementById('input-model').value.trim() || 'Not specified';
+      const notes = document.getElementById('input-notes').value.trim() || 'None';
+      const area = document.getElementById('input-area').value;
+      const dateVal = document.getElementById('input-date').value || 'Earliest available';
+      const timeVal = document.getElementById('input-time').value;
+      const totalText = document.getElementById('sum-total').textContent;
+      const addonsText = document.getElementById('sum-addons-row').classList.contains('rf-hidden')
+        ? 'None'
+        : document.getElementById('sum-addons').textContent;
+
+      return [
+        '🏍️ *NEW RIDEFIX DUBAI BOOKING*',
+        '----------------------------',
+        '• *Customer:* ' + name,
+        '• *Phone:* ' + custPhone,
+        '• *Vehicle:* ' + bookingState.qty + 'x ' + bookingState.vehicle + ' (' + model + ')',
+        '• *Package:* ' + bookingState.packageName,
+        '• *Add-Ons:* ' + addonsText,
+        '• *Dubai Area:* ' + area,
+        '• *Preferred Schedule:* ' + dateVal + ' | ' + timeVal,
+        '• *Notes:* ' + notes,
+        '• *Estimated Total:* ' + totalText + (totalText !== 'Custom Quote' ? ' AED' : '') + ' (Pay After Service)'
+      ].join('\n');
+    }
+
+
+
+    function resetBookingForm() {
+      ['input-model', 'input-notes', 'input-name', 'input-cust-phone', 'input-date'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.value = '';
+      });
+      document.getElementById('addon-wheel').checked = false;
+      document.getElementById('addon-brake').checked = false;
+      document.getElementById('input-area').value = 'Dubai Marina';
+      document.getElementById('input-time').value = 'Morning (9 AM – 12 PM)';
+      bookingState.qty = 1;
+      document.getElementById('booking-qty').textContent = '1';
+      setBookingVehicle('Motorcycle');
+      showToast('Booking form reset!');
+    }
+
+    function copyBookingSummary() {
+      const cleanText = buildBookingText().replace(/\*/g, '');
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(cleanText).then(() => {
+          showToast('Booking summary copied!');
+        }).catch(() => {
+          fallbackCopy(cleanText);
+        });
+      } else {
+        fallbackCopy(cleanText);
+      }
+    }
+    function fallbackCopy(text) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      showToast('Booking summary copied!');
+    }
+
+    function sendBookingWhatsApp() {
+      const cleanDigits = dispatchPhone.replace(/[^0-9]/g, '');
+      const msg = encodeURIComponent(buildBookingText());
+      window.open('https://wa.me/' + cleanDigits + '?text=' + msg, '_blank', 'noopener');
+    }
+
+    function sendBookingEmail() {
+      const subject = encodeURIComponent('RideFix Dubai Booking — ' + bookingState.vehicle + ' (' + document.getElementById('input-area').value + ')');
+      const body = encodeURIComponent(buildBookingText().replace(/\*/g, ''));
+      window.location.href = 'mailto:' + dispatchEmail + '?subject=' + subject + '&body=' + body;
+    }
+
+    function renderFaqs() {
+      const container = document.getElementById('faq-container');
+      container.innerHTML = faqs.map(item =>
+        '<details class="rf-card" style="padding:16px;">' +
+          '<summary style="cursor:pointer;font-weight:800;color:#FFFFFF;font-size:14px;">' + item.q + '</summary>' +
+          '<p style="margin:10px 0 0;font-size:13px;color:#CBD5E1;border-top:1px solid #283140;padding-top:10px;">' + item.a + '</p>' +
+        '</details>'
+      ).join('');
+    }
+
+    function openPhoneModal() {
+      document.getElementById('modal-phone-input').value = dispatchPhone;
+      document.getElementById('phone-modal').classList.remove('rf-hidden');
+    }
+
+    function closePhoneModal() {
+      document.getElementById('phone-modal').classList.add('rf-hidden');
+    }
+
+    function saveNewPhone() {
+      const val = document.getElementById('modal-phone-input').value.trim();
+      if (!val) return;
+      dispatchPhone = val;
+      const digits = dispatchPhone.replace(/[^0-9]/g, '');
+      const telHref = 'tel:+' + digits;
+      const waHref = 'https://wa.me/' + digits + '?text=' + encodeURIComponent('Hi RideFix Dubai! I would like to book a service.');
+
+      ['top-phone-text', 'footer-phone-text', 'summary-phone-display'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.textContent = dispatchPhone;
+      });
+      ['top-phone-link', 'drawer-call-link', 'footer-phone-link', 'mobile-bar-call'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.href = telHref;
+      });
+      ['header-wa-btn', 'hero-wa-btn', 'footer-wa-btn', 'mobile-bar-wa'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.href = waHref;
+      });
+
+      closePhoneModal();
+      showToast('Dispatch number updated to ' + dispatchPhone);
+    }
+
+    const drawerBtn = document.getElementById('mobile-drawer-btn');
+    const drawer = document.getElementById('mobile-drawer');
+    drawerBtn.addEventListener('click', () => {
+      drawer.classList.toggle('rf-hidden');
+    });
+    function closeDrawer() {
+      drawer.classList.add('rf-hidden');
+    }
+
+    function showToast(message) {
+      const box = document.getElementById('toast-box');
+      document.getElementById('toast-msg').textContent = message;
+      box.classList.remove('rf-hidden');
+      setTimeout(() => box.classList.add('rf-hidden'), 3000);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      renderScene();
+      startStoryLoop();
+      renderProblems();
+      renderFaqs();
+      setBookingVehicle('Motorcycle');
+    });
+  </script>
+</body>
+</html>
